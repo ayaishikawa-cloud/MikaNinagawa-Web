@@ -3,7 +3,7 @@ import Component01IndexPcO from "../imports/01IndexPcO/01IndexPcO";
 import SmoothScroll from "./SmoothScroll";
 
 const DESIGN_WIDTH = 1280;
-const DESIGN_HEIGHT = 6850;
+const DESIGN_HEIGHT = 7050;
 
 export default function App() {
   const [scale, setScale] = useState(1);
