@@ -20,7 +20,6 @@ import imgPhoto04Sec01 from "./b2c977e6cfcda7545fa3e1488073edcad7fab7a9.png";
 import imgPhoto03Sec01 from "./a45ae21d2ca1ab4f44409f1cc1a37df86494e66c.png";
 import imgPhoto02Sec01 from "./b401b651683b492c8d3c6b621705dafe1fe08c98.png";
 import imgPhoto01Sec01 from "./798856b17fea137fe816f56fb4d79fa710b2d472.png";
-import imgRectangle11 from "./307552f834a5f98718e931306e95c31913670b42.png";
 import img202605062139591 from "./a8ab8a566586d2ed96a768b9300b91c563907737.png";
 import imgRectangle12 from "./98cd64c15bbe778d328ed75265e81d0cbe91b881.png";
 import imgBox23 from "./862a701c18b73d42038a224aac3afbe7f78791e0.png";
@@ -150,7 +149,7 @@ function Hero() {
           </div>
         </div>
       </div>
-      <motion.div initial={{ clipPath: "inset(0 100% 0 0)" }} animate={{ clipPath: "inset(0 0% 0 0)" }} transition={{ duration: 1, ease: "easeOut", delay: 0.1 }} className="absolute flex inset-[1.18%_-3.68%_91.93%_37.42%] items-center justify-center" style={{ containerType: "size" }}>
+      <motion.div initial={{ clipPath: "inset(0 100% 0 0)" }} animate={{ clipPath: "inset(0 0% 0 0)" }} transition={{ duration: 1, ease: "easeOut", delay: 0.1 }} className="absolute flex inset-[1.5%_-8%_90%_30%] items-center justify-center" style={{ containerType: "size" }}>
         <div className="-rotate-15 flex-none h-[hypot(5.5846cqw,45.1707cqh)] w-[hypot(94.4154cqw,-54.8293cqh)]">
           <div className="relative size-full">
             <div className="absolute inset-[-27.32%_-6.03%]">
@@ -283,26 +282,6 @@ function Section() {
   );
 }
 
-function Bg02Sec() {
-  return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[780.976px] items-center justify-center left-[calc(50%+447.3px)] top-[calc(50%-123.88px)] w-[675.92px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "0" } as React.CSSProperties}>
-      <div className="flex-none rotate-90">
-        <div className="bg-[#1d1d1d] h-[675.92px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[82.656px_-4.635px] mask-size-[587.857px_988px] relative w-[780.976px]" style={{ maskImage: `url('${imgRectangle11}')` }} />
-      </div>
-    </div>
-  );
-}
-
-function Bg01Sec() {
-  return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[780.976px] items-center justify-center left-[calc(50%-318.45px)] top-[calc(50%-887.12px)] w-[675.92px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "0" } as React.CSSProperties}>
-      <div className="-rotate-90 flex-none">
-        <div className="bg-[#1d1d1d] h-[675.92px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[5.407px_-202.389px] mask-size-[587.857px_988px] relative w-[780.976px]" style={{ maskImage: `url('${imgRectangle11}')` }} />
-      </div>
-    </div>
-  );
-}
-
 function MovieSec() {
   return (
     <>
@@ -317,8 +296,6 @@ function MovieSec() {
 function Section1() {
   return (
     <section>
-      <Bg02Sec />
-      <Bg01Sec />
       <div className="absolute flex h-[354.581px] items-center justify-center left-[532px] top-[2746.01px] w-[908.353px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-[-21.32deg]">
           <div className="h-0 relative w-[975.107px]">
@@ -337,7 +314,7 @@ function Section1() {
           <p className="font-['Instrument_Serif',serif] leading-[12px] not-italic relative text-[18px] text-center text-white tracking-[1.8px] whitespace-nowrap">Mika Ninagawa</p>
         </div>
       </div>
-      <div className="-translate-x-1/2 absolute font-['Zen_Old_Mincho',serif] leading-[0] left-[847px] not-italic text-[40px] text-center text-white top-[3380px] whitespace-nowrap">
+      <div className="-translate-x-1/2 absolute font-['Zen_Old_Mincho',serif] leading-[0] left-[847px] not-italic text-[40px] text-center text-white top-[3530px] whitespace-nowrap">
         <p className="leading-[48px] mb-0 whitespace-pre">蜷</p>
         <p className="leading-[48px] mb-0 whitespace-pre">川</p>
         <p className="leading-[48px] mb-0 whitespace-pre">​</p>
