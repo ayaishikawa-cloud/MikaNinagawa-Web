@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Component01IndexPcO from "../imports/01IndexPcO/01IndexPcO";
 import SmoothScroll from "./SmoothScroll";
+import LoadingScreen from "./LoadingScreen";
 
 const DESIGN_WIDTH = 1280;
 const DESIGN_HEIGHT = 7050;
@@ -17,6 +18,7 @@ export default function App() {
 
   return (
     <>
+      <LoadingScreen />
       <SmoothScroll />
       <div
         className="bg-[#111] w-full overflow-x-clip [&_*]:!font-extralight"

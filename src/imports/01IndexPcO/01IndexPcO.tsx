@@ -261,13 +261,13 @@ function Section() {
   return (
     <section>
       <BgSec />
-      <ParallaxPhoto src={imgPhoto07Sec01} speed={120} className="absolute h-[222px] left-[777px] top-[2238px] w-[332.25px]" />
-      <ParallaxPhoto src={imgPhoto06Sec01} speed={-90} className="absolute h-[386.25px] left-[-29px] top-[1915px] w-[515.25px]" />
-      <ParallaxPhoto src={imgPhoto05Sec01} speed={150} className="absolute h-[288px] left-[153px] top-[2130px] w-[431.25px]" />
-      <ParallaxPhoto src={imgPhoto04Sec01} speed={-140} className="absolute h-[219px] left-[982px] top-[1872px] w-[330px]" />
-      <ParallaxPhoto src={imgPhoto03Sec01} speed={80} className="absolute h-[338px] left-[106px] top-[1872px] w-[478px]" />
-      <ParallaxPhoto src={imgPhoto02Sec01} speed={-110} className="absolute h-[339px] left-[698px] top-[2015px] w-[478px]" />
-      <ParallaxPhoto src={imgPhoto01Sec01} speed={100} className="absolute h-[339px] left-[378px] top-[2185px] w-[477px]" />
+      <ParallaxPhoto src={imgPhoto07Sec01} speed={220} className="absolute h-[222px] left-[777px] top-[2238px] w-[332.25px]" />
+      <ParallaxPhoto src={imgPhoto06Sec01} speed={-190} className="absolute h-[386.25px] left-[-29px] top-[1915px] w-[515.25px]" />
+      <ParallaxPhoto src={imgPhoto05Sec01} speed={250} className="absolute h-[288px] left-[153px] top-[2130px] w-[431.25px]" />
+      <ParallaxPhoto src={imgPhoto04Sec01} speed={-240} className="absolute h-[219px] left-[982px] top-[1872px] w-[330px]" />
+      <ParallaxPhoto src={imgPhoto03Sec01} speed={180} className="absolute h-[338px] left-[106px] top-[1872px] w-[478px]" />
+      <ParallaxPhoto src={imgPhoto02Sec01} speed={-210} className="absolute h-[339px] left-[698px] top-[2015px] w-[478px]" />
+      <ParallaxPhoto src={imgPhoto01Sec01} speed={200} className="absolute h-[339px] left-[378px] top-[2185px] w-[477px]" />
       <div className="absolute font-['Hiragino_Mincho_Pro',serif] leading-[0] left-[59px] not-italic text-[20px] text-white top-[2172px] whitespace-nowrap">
         <motion.p {...fadeIn} className="leading-[24px] mb-0">破</motion.p>
         <motion.p {...fadeIn} className="leading-[24px] mb-0">壊</motion.p>
@@ -604,8 +604,8 @@ function Section4() {
 function Footer() {
   return (
     <footer>
-      <div className="-translate-x-1/2 absolute bottom-[1.41%] left-[calc(50%+545.5px)] top-[98.19%] w-[123px]">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 123 23">
+      <div className="-translate-x-1/2 absolute left-[calc(50%+545.5px)] top-[7012px] w-[123px] h-[16px] flex items-center">
+        <svg className="block w-full h-auto" fill="none" viewBox="0 0 123 23">
           <g id="logo_dipsy">
             <path d={svgPaths.p412a900} fill="var(--fill-0, white)" />
             <path d={svgPaths.p133bb600} fill="var(--fill-0, white)" />
@@ -616,7 +616,7 @@ function Footer() {
           </g>
         </svg>
       </div>
-      <motion.p {...fadeIn} className="absolute font-['Instrument_Serif',serif] font-light leading-[16px] left-[138px] text-[11px] text-white top-[7012px] whitespace-pre" style={{ fontVariationSettings: "'wdth' 100" }}>{`©  2026 DIPSY Inc. All rights reserved.`}</motion.p>
+      <motion.p {...fadeIn} className="absolute font-['Roboto',sans-serif] font-light leading-[16px] left-[138px] text-[11px] text-white top-[7012px] whitespace-pre" style={{ fontVariationSettings: "'wdth' 100" }}>{`©  2026 DIPSY Inc. All rights reserved.`}</motion.p>
       <motion.p {...fadeIn} className="absolute font-['Noto_Sans_JP',sans-serif] leading-[16px] left-[30px] not-italic text-[12px] text-white top-[7012px] whitespace-pre">{`利用規約　　｜　　`}</motion.p>
     </footer>
   );
