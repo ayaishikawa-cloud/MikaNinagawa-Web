@@ -3,7 +3,7 @@ import Component01IndexPcO from "../imports/01IndexPcO/01IndexPcO";
 import SmoothScroll from "./SmoothScroll";
 
 const DESIGN_WIDTH = 1280;
-const DESIGN_HEIGHT = 5820;
+const DESIGN_HEIGHT = 6850;
 
 export default function App() {
   const [scale, setScale] = useState(1);
@@ -19,7 +19,7 @@ export default function App() {
     <>
       <SmoothScroll />
       <div
-        className="bg-[#111] w-full overflow-hidden [&_*]:!font-extralight"
+        className="bg-[#111] w-full overflow-x-clip [&_*]:!font-extralight"
         style={{ height: DESIGN_HEIGHT * scale, fontWeight: 200 }}
       >
         <div
