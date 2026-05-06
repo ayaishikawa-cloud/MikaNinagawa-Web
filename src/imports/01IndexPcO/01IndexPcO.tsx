@@ -500,25 +500,17 @@ function Img04Sec() {
   return <ProductCard src={imgS1600X2133VFrmsWebp59C9Cca8143A4D9E987086C7B74CdcdeWebp1} imgWidth={320.63} imgHeight={427.44} offsetX={-9.741} offsetY={0} />;
 }
 
-function HorizontalParallax({ speed, children }: { speed: number; children: React.ReactNode }) {
+function Frame2() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const x = useTransform(scrollYProgress, [0, 1], [speed, -speed]);
+  const x = useTransform(scrollYProgress, [0, 1], [400, -400]);
   return (
-    <motion.div ref={ref} style={{ x }} className="shrink-0">
-      {children}
+    <motion.div ref={ref} style={{ x }} className="content-stretch flex gap-[24px] items-center leading-[0] relative shrink-0">
+      <Img01Sec />
+      <Img02Sec />
+      <Img03Sec />
+      <Img04Sec />
     </motion.div>
-  );
-}
-
-function Frame2() {
-  return (
-    <div className="content-stretch flex gap-[24px] items-center leading-[0] relative shrink-0">
-      <HorizontalParallax speed={250}><Img01Sec /></HorizontalParallax>
-      <HorizontalParallax speed={500}><Img02Sec /></HorizontalParallax>
-      <HorizontalParallax speed={750}><Img03Sec /></HorizontalParallax>
-      <HorizontalParallax speed={1000}><Img04Sec /></HorizontalParallax>
-    </div>
   );
 }
 
