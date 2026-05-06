@@ -1,0 +1,664 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
+
+const fadeIn = {
+  initial: { opacity: 0, y: 16 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.4 },
+  transition: { duration: 0.7, ease: "easeOut" },
+} as const;
+import svgPaths from "./svg-j6uad99ttk";
+import img80A6842 from "./9714234be74e8638426b0727fcd956c9b143294a.png";
+import img110191118Vca598652800X12003 from "./3800ff74777e5ee427f5afce19caeffd911e9489.png";
+import imgPaint002 from "./e02aa0fce2873d6fd27d88549a96aa3786ad40e0.png";
+import img141216041936900X12002 from "./8e06a0486a91890b1caf8c716bde82ea6a40a2ea.png";
+import imgPhoto07Sec01 from "./d60f1cbbf07b4b5959221b170f9437d73d7cde0d.png";
+import imgPhoto06Sec01 from "./c9b2a38377132388fca2a0ddc9178bbb047e3940.png";
+import imgPhoto05Sec01 from "./91b0e119065989ac2d7654fee36d052a1f2289ac.png";
+import imgPhoto04Sec01 from "./b2c977e6cfcda7545fa3e1488073edcad7fab7a9.png";
+import imgPhoto03Sec01 from "./a45ae21d2ca1ab4f44409f1cc1a37df86494e66c.png";
+import imgPhoto02Sec01 from "./b401b651683b492c8d3c6b621705dafe1fe08c98.png";
+import imgPhoto01Sec01 from "./798856b17fea137fe816f56fb4d79fa710b2d472.png";
+import imgRectangle11 from "./307552f834a5f98718e931306e95c31913670b42.png";
+import img202605062139591 from "./a8ab8a566586d2ed96a768b9300b91c563907737.png";
+import imgRectangle12 from "./98cd64c15bbe778d328ed75265e81d0cbe91b881.png";
+import imgBox23 from "./862a701c18b73d42038a224aac3afbe7f78791e0.png";
+import img80A6632 from "./85a92643cfc8ea2127cb6553bae8279a76d47044.png";
+import imgS1600X2133VFrmsWebpFf594319Bdc3406D8B06E5Ee25F80E0FWebp1 from "./9fcb13bc64cd31fd8b75bb0e064a6ea536fcb195.png";
+import imgS1600X2133VFrmsWebp272D6FecEd0D4F3591D3Dbab1025219DWebp1 from "./dd347c12beb48f5b69e5fcddf4baa037e70a4a8e.png";
+import imgS1600X2133VFrmsWebp59C9Cca8143A4D9E987086C7B74CdcdeWebp1 from "./488a9aee76e938753e3880d8d5dcaf1da822e27d.png";
+import imgRectangle13 from "./5317d1625578a70e60886f852db5623e81fc5541.png";
+import imgImgSec05 from "./1d9b0dde9104012a5cd940cb30c770ee5aa53b58.png";
+import imgBgSec05 from "../bg_sec05.png";
+import { img80A06841, img141216041936900X12001, imgBox022, img80A06631 } from "./svg-n94c3";
+
+function MovieHero() {
+  return (
+    <div className="absolute contents left-0 top-0" data-name="movie_hero">
+      <div className="-translate-x-1/2 absolute h-[854px] left-1/2 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0px] mask-size-[1280px_720px] opacity-90 top-0 w-[1280px]" style={{ maskImage: `url('${img80A06841}')` }} data-name="_80A0684 1">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img80A6842} />
+      </div>
+    </div>
+  );
+}
+
+function AnkerSection() {
+  return (
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 cursor-pointer group" data-name="anker_section03">
+      <div className="bg-white col-1 h-[44px] ml-0 mt-0 relative rounded-[5px] row-1 w-[139px] transition-colors duration-200 group-hover:bg-neutral-300" />
+      <p className="col-1 font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] leading-[22px] ml-[31px] mt-[11px] not-italic relative row-1 text-[13px] text-black whitespace-nowrap pointer-events-none">予約注文する</p>
+    </div>
+  );
+}
+
+function Floating() {
+  return (
+    <div className="absolute content-stretch flex flex-col gap-[15px] items-start right-[25px] top-[599px] w-[320px]" data-name="Floating">
+      <p className="font-['Instrument_Serif:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[20px] text-left text-shadow-[0px_0px_20px_rgba(0,0,0,0.65)] text-white tracking-[0.6px] whitespace-nowrap">Mika Ninagawa Artist’s Book</p>
+      <AnkerSection />
+    </div>
+  );
+}
+
+function Hero() {
+  return (
+    <div className="absolute contents left-0 top-0" data-name="Hero">
+      <MovieHero />
+      <Floating />
+      <div className="absolute h-[156px] left-[1121px] top-[204px] w-[54px]" data-name="special">
+        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 54 156">
+          <g id="special">
+            <path d={svgPaths.p22051900} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p2cc54600} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p1def3600} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p317e3bc0} fill="var(--fill-0, white)" />
+          </g>
+        </svg>
+      </div>
+      <div className="absolute h-[346px] left-[1053px] top-[196px] w-[35px]" data-name="mirrormirrormirror">
+        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 35 346">
+          <g id="mirrormirrormirror">
+            <path d={svgPaths.p33743280} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p28799900} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p3d005900} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p2c98b300} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p2335b80} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p2d5dedf0} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p1d87c500} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p2cd11100} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p24228e00} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p2abeed00} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p1c0b0500} fill="var(--fill-0, white)" />
+          </g>
+        </svg>
+      </div>
+      <motion.div initial={{ y: -120, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.1, ease: "easeOut" }} className="absolute h-[646px] left-[119px] top-[44px] w-[58px]" data-name="mikaninagawa">
+        <div className="absolute inset-[-8.05%_-89.66%]">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 162 750">
+            <g filter="url(#filter0_d_1_150)" id="mikaninagawa">
+              <path d={svgPaths.p1b6a1d00} fill="var(--fill-0, white)" />
+              <path d={svgPaths.p1581b480} fill="var(--fill-0, white)" />
+              <path d={svgPaths.p2e7f6700} fill="var(--fill-0, white)" />
+              <path d={svgPaths.p3679b6c0} fill="var(--fill-0, white)" />
+            </g>
+            <defs>
+              <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="750" id="filter0_d_1_150" width="162" x="8.84427e-10" y="3.87985e-10">
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                <feOffset />
+                <feGaussianBlur stdDeviation="26" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.208027 0 0 0 0 0.0639652 0 0 0 0 0.0639652 0 0 0 0.7 0" />
+                <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow_1_150" />
+                <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_150" mode="normal" result="shape" />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </motion.div>
+      <div className="absolute flex h-[148.808px] items-center justify-center left-[890px] top-[555px] w-[436.877px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+        <div className="flex-none rotate-[161.19deg]">
+          <div className="h-0 relative w-[461.525px]">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 461.525 1">
+                <line id="Line 2" stroke="var(--stroke-0, white)" x2="461.525" y1="0.5" y2="0.5" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute flex h-[368px] items-center justify-center left-0 top-[196px] w-[903px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+        <div className="flex-none rotate-[22.17deg]">
+          <div className="h-0 relative w-[975.107px]">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 975.107 1">
+                <line id="Line 1" stroke="var(--stroke-0, white)" x2="975.107" y1="0.5" y2="0.5" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <motion.div initial={{ clipPath: "inset(0 100% 0 0)" }} animate={{ clipPath: "inset(0 0% 0 0)" }} transition={{ duration: 1, ease: "easeOut", delay: 0.1 }} className="absolute flex inset-[1.18%_-3.68%_91.93%_37.42%] items-center justify-center" style={{ containerType: "size" }}>
+        <div className="-rotate-15 flex-none h-[hypot(5.5846cqw,45.1707cqh)] w-[hypot(94.4154cqw,-54.8293cqh)]">
+          <div className="relative size-full" data-name="title">
+            <div className="absolute inset-[-27.32%_-6.03%]">
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 929 283">
+                <g filter="url(#filter0_d_1_144)" id="title">
+                  <path d={svgPaths.p32564580} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p2c0afb00} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p21007e80} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p3b1fee70} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p13290200} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p3418a700} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p297fe8c0} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p3191ee00} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.pbfda080} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p1ae89970} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p1e41aa00} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p1113e300} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p11dfb500} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p31981500} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p59cf600} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p39392500} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p1a47d700} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.pc382a40} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p9686cf0} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p33151500} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p36f55a00} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p2510100} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p7df7100} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p2cecfa80} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p1e5fa700} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p1ff48e00} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p3b93b200} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p37f0e200} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p3229cd00} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p670cd70} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p205acd00} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p2b677f00} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p1fee0f00} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p3bd08800} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p576c200} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.pe5a8100} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p2da5ea00} fill="var(--fill-0, white)" />
+                  <path d={svgPaths.p34dde100} fill="var(--fill-0, white)" />
+                </g>
+                <defs>
+                  <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="283" id="filter0_d_1_144" width="929" x="0" y="0">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="25" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.207843 0 0 0 0 0.0627451 0 0 0 0 0.0627451 0 0 0 0.5 0" />
+                    <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow_1_144" />
+                    <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_144" mode="normal" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+function Movie() {
+  return (
+    <div className="absolute left-0 top-[720px] w-[1280px] h-[853px]" data-name="movie">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img110191118Vca598652800X12003} />
+    </div>
+  );
+}
+
+function MaskGroup() {
+  return (
+    <div className="contents" data-name="Mask group">
+      <div className="-translate-x-1/2 absolute flex h-[883px] items-center justify-center left-[calc(50%+3.5px)] top-[487px] w-[1177px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+        <div className="-rotate-90 flex-none">
+          <div className="h-[1177px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[1px_298px] mask-size-[1176px_585px] relative w-[883px]" style={{ maskImage: `url('${img141216041936900X12001}')` }} data-name="141216_041936-900x1200 1">
+            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img141216041936900X12002} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BgSec() {
+  return (
+    <div className="absolute contents left-0 top-[720px]" data-name="bg_sec01">
+      <Movie />
+      <div className="absolute h-[853px] left-0 top-[720px] w-[1281px]" data-name="paint_00 2">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgPaint002} />
+      </div>
+    </div>
+  );
+}
+
+function ParallaxPhoto({ className, src, speed, name }: { className: string; src: string; speed: number; name: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const y = useTransform(scrollYProgress, [0, 1], [speed, -speed]);
+  return (
+    <motion.div ref={ref} className={className} style={{ y }} data-name={name}>
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={src} />
+    </motion.div>
+  );
+}
+
+function Section() {
+  return (
+    <div className="absolute contents left-[-29px] top-[720px]" data-name="Section01">
+      <BgSec />
+      <ParallaxPhoto name="photo07_sec01" src={imgPhoto07Sec01} speed={120} className="absolute h-[222px] left-[777px] top-[1208px] w-[332.25px]" />
+      <ParallaxPhoto name="photo06_sec01" src={imgPhoto06Sec01} speed={-90} className="absolute h-[386.25px] left-[-29px] top-[885px] w-[515.25px]" />
+      <ParallaxPhoto name="photo05_sec01" src={imgPhoto05Sec01} speed={150} className="absolute h-[288px] left-[153px] top-[1100px] w-[431.25px]" />
+      <ParallaxPhoto name="photo04_sec01" src={imgPhoto04Sec01} speed={-140} className="absolute h-[219px] left-[982px] top-[842px] w-[330px]" />
+      <ParallaxPhoto name="photo03_sec01" src={imgPhoto03Sec01} speed={80} className="absolute h-[338px] left-[106px] top-[842px] w-[478px]" />
+      <ParallaxPhoto name="photo02_sec01" src={imgPhoto02Sec01} speed={-110} className="absolute h-[339px] left-[698px] top-[985px] w-[478px]" />
+      <ParallaxPhoto name="photo01_sec01" src={imgPhoto01Sec01} speed={100} className="absolute h-[339px] left-[378px] top-[1155px] w-[477px]" />
+      <div className="absolute font-['Hiragino_Mincho_Pro:W3',sans-serif] leading-[0] left-[59px] not-italic text-[20px] text-white top-[1142px] whitespace-nowrap">
+        <motion.p {...fadeIn} className="leading-[24px] mb-0">破</motion.p>
+        <motion.p {...fadeIn} className="leading-[24px] mb-0">壊</motion.p>
+        <motion.p {...fadeIn} className="leading-[24px] mb-0">、</motion.p>
+        <motion.p {...fadeIn} className="leading-[24px] mb-0">再</motion.p>
+        <motion.p {...fadeIn} className="leading-[24px] mb-0">生</motion.p>
+        <motion.p {...fadeIn} className="leading-[24px] mb-0">、</motion.p>
+        <motion.p {...fadeIn} className="leading-[24px] mb-0">ま</motion.p>
+        <motion.p {...fadeIn} className="leading-[24px]">た破壊</motion.p>
+      </div>
+    </div>
+  );
+}
+
+function Bg02Sec() {
+  return (
+    <div className="absolute contents h-[988px] left-[832px] top-[2320px] w-[587.857px]" data-name="bg02_Sec02">
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[780.976px] items-center justify-center left-[calc(50%+447.3px)] top-[calc(50%-123.88px)] w-[675.92px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "0" } as React.CSSProperties}>
+        <div className="flex-none rotate-90">
+          <div className="bg-[#1d1d1d] h-[675.92px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[82.656px_-4.635px] mask-size-[587.857px_988px] relative w-[780.976px]" style={{ maskImage: `url('${imgRectangle11}')` }} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Bg01Sec() {
+  return (
+    <div className="absolute contents h-[988px] left-[-11px] top-[1209px] w-[587.857px]" data-name="bg01_Sec02">
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[780.976px] items-center justify-center left-[calc(50%-318.45px)] top-[calc(50%-887.12px)] w-[675.92px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "0" } as React.CSSProperties}>
+        <div className="-rotate-90 flex-none">
+          <div className="bg-[#1d1d1d] h-[675.92px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[5.407px_-202.389px] mask-size-[587.857px_988px] relative w-[780.976px]" style={{ maskImage: `url('${imgRectangle11}')` }} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MovieSec() {
+  return (
+    <div className="absolute contents left-[347px] top-[1901px]" data-name="movie_sec02">
+      <div className="absolute bg-black h-[351px] left-[347px] top-[1901px] w-[621px]" />
+      <div className="-translate-x-1/2 absolute h-[346px] left-[calc(50%+18px)] top-[1903px] w-[620px]" data-name="スクリーンショット 2026-05-06 21.39.59 1">
+        <img alt="" className="absolute inset-0 max-w-none object-cover opacity-25 pointer-events-none size-full" src={img202605062139591} />
+      </div>
+    </div>
+  );
+}
+
+function Section1() {
+  return (
+    <div className="absolute contents left-[-11px] top-[1209px]" data-name="Section02">
+      <Bg02Sec />
+      <Bg01Sec />
+      <div className="absolute flex h-[354.581px] items-center justify-center left-[532px] top-[1716.01px] w-[908.353px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+        <div className="flex-none rotate-[-21.32deg]">
+          <div className="h-0 relative w-[975.107px]">
+            <div className="absolute inset-[-0.5px_0_0_0]">
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 975.107 0.5">
+                <line id="Line 1" stroke="var(--stroke-0, white)" strokeWidth="0.5" x2="975.107" y1="0.25" y2="0.25" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <MovieSec />
+      <motion.p {...fadeIn} className="absolute font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] h-[190px] leading-[19px] left-[calc(50%+269px)] not-italic text-[11px] text-justify text-white top-[2500px] w-[264px]">写真を中心として、映画、映像、空間インスタレーションも多く手掛ける。クリエイティブチーム「EiM（エイム）」の一員としても活動中。木村伊兵衛写真賞ほか数々受賞。2010年ニューヨークのRizzoliから写真集を出版。また、『ヘルタースケルター』（2012年）、『Diner ダイナー』（2019年）をはじめ長編映画を5作、Netflixオリジナルドラマ『FOLLOWERS』（2020年）を監督。これまでに写真集120冊以上を刊行、個展150回以上、グループ展130回以上と国内外で精力的に作品発表を続ける。</motion.p>
+      <div className="-translate-x-1/2 absolute flex h-[117px] items-center justify-center left-[calc(50%+257px)] top-[2320px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+        <div className="flex-none rotate-90">
+          <p className="font-['Instrument_Serif:Regular',sans-serif] leading-[12px] not-italic relative text-[18px] text-center text-white tracking-[1.8px] whitespace-nowrap">Mika Ninagawa</p>
+        </div>
+      </div>
+      <div className="-translate-x-1/2 absolute font-['Hiragino_Mincho_Pro:W3',sans-serif] leading-[0] left-[847px] not-italic text-[40px] text-center text-white top-[2350px] whitespace-nowrap">
+        <p className="leading-[48px] mb-0 whitespace-pre">蜷</p>
+        <p className="leading-[48px] mb-0 whitespace-pre">川</p>
+        <p className="leading-[48px] mb-0 whitespace-pre">​</p>
+        <p className="leading-[48px] mb-0 whitespace-pre">実</p>
+        <p className="leading-[48px] whitespace-pre">花</p>
+      </div>
+      <p className="absolute font-['Hiragino_Mincho_Pro:W3',sans-serif] leading-[48px] left-[calc(50%-486px)] not-italic text-[23px] text-justify text-white top-[1791px] w-[987px]">
+        {[
+          "30年近くキャリアを重ねていくなかで、映画やインスタレーション作品など大きなプロジェクトをやる機会も増えてきた。",
+          "どれも新しい挑戦だし、いつだって熱を入れて作品をつくっているけれど、やっぱり写真が全てのスタート地点であり帰る場所。",
+          "今日もどこに発表するでもなく、呼吸をするように撮り続けている。",
+          "大きなプロジェクトをやればやるほど「カメラで世界を切り取る」というシンプルな行為が輝いて見える。",
+          "改めてそんなことを感じていた時に、この本の話が舞い込んできて、自然とこういう形になっていった。",
+          "これまでに 100 冊以上出してきたどの写真集とも違う、私の創作に対するある種の狂気を孕んだエネルギーや「撮らずにはいられない」原始的な衝動を詰め込んだ本が完成した。",
+          "編集者を筆頭に、この本に関わった全員が尋常じゃないエネルギーと愛を注いでくれた超アナログな本。",
+          "この時代にこの本をつくったのは必然だったと思う。",
+          "これから担当編集が夜なべして、何千冊も手作業でリボンを結んで仕上げるんですよ。",
+          "そのエネルギー、今の時代ほかにはないと思う。",
+        ].map((line, i) => (
+          <motion.span
+            key={i}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            {line}
+          </motion.span>
+        ))}
+      </p>
+      <div className="absolute flex h-[68px] items-center justify-center left-[calc(50%-611px)] top-[1497px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+        <div className="flex-none rotate-90">
+          <p className="font-['Instrument_Serif:Regular',sans-serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Comment</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BgSec1() {
+  return (
+    <div className="absolute contents left-0 top-[3477px]" data-name="bg_sec03">
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#1d1d1d] h-[1024.21px] left-[calc(50%+117.59px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-5.873px_7.047px] mask-size-[1514px_1008.941px] top-[calc(50%+1143.06px)] w-[1503.429px]" style={{ maskImage: `url('${imgRectangle12}')` }} />
+    </div>
+  );
+}
+
+function MaskGroup1() {
+  return (
+    <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-0 place-items-start relative row-1" data-name="Mask group">
+      <div className="col-1 h-[720px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[1px_50px] mask-size-[1280px_620px] ml-[-1px] mt-[-50px] relative row-1 w-[1282px]" style={{ maskImage: `url('${imgBox022}')` }} data-name="box02 2">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBox23} />
+      </div>
+      <div className="col-1 h-[596px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-109px_-12px] mask-size-[1280px_620px] ml-[109px] mt-[12px] relative row-1 w-[1062px]" style={{ maskImage: `url('${imgBox022}')` }} data-name="box02 3">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBox23} />
+      </div>
+    </div>
+  );
+}
+
+function MovieSec1() {
+  return (
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-name="movie_sec03">
+      <MaskGroup1 />
+    </div>
+  );
+}
+
+function TagSpecial() {
+  return (
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-name="tag_special">
+      <p className="col-1 font-['Zen_Old_Mincho:Bold',sans-serif] leading-[17.059px] ml-[16.21px] mt-[5.12px] not-italic relative row-1 text-[17.059px] text-white tracking-[-0.6824px] whitespace-nowrap">特装版</p>
+      <div className="border-[0.426px] border-solid border-white col-1 h-[29px] ml-0 mt-0 relative row-1 w-[81.882px]" />
+    </div>
+  );
+}
+
+function ButtonOrder() {
+  return (
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 cursor-pointer group" data-name="button_order">
+      <div className="bg-white col-1 h-[44px] ml-0 mt-0 relative rounded-[5px] row-1 w-[139px] transition-colors duration-200 group-hover:bg-neutral-300" />
+      <p className="col-1 font-['Noto_Sans_CJK_JP:Regular',sans-serif] leading-[22px] ml-[31px] mt-[11px] not-italic relative row-1 text-[13px] text-black whitespace-nowrap pointer-events-none">予約注文する</p>
+    </div>
+  );
+}
+
+function LeftColumn() {
+  return (
+    <div className="content-stretch flex flex-col gap-[29px] items-start relative shrink-0 w-[453px]" data-name="LeftColumn">
+      <TagSpecial />
+      <motion.p {...fadeIn} className="font-['Hiragino_Mincho_Pro:W3',sans-serif] leading-[48px] min-w-full not-italic relative shrink-0 text-[40px] text-white w-[min-content]">mirror, mirror, mirror mika ninagawa</motion.p>
+      <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] leading-[0] min-w-full not-italic relative shrink-0 text-[0px] text-white tracking-[0.96px] w-[min-content]">
+        <span className="font-['Noto_Sans_CJK_JP:Light',sans-serif] leading-[32px] text-[32px]">¥820,000</span>
+        <span className="leading-[32px] text-[32px]">{` `}</span>
+        <span className="leading-[32px] text-[16px]">(税込)</span>
+      </motion.p>
+      <ButtonOrder />
+      <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] leading-[16px] min-w-full not-italic relative shrink-0 text-[10px] text-white w-[min-content]">発送予定：ご注文いただいてから、6ヶ月後から順次発送</motion.p>
+    </div>
+  );
+}
+
+function RightColumn() {
+  return (
+    <div className="content-stretch flex flex-col gap-[34px] items-start not-italic relative shrink-0 text-white w-[466px]" data-name="RightColumn">
+      <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] h-[132px] leading-[22px] relative shrink-0 text-[13px] text-justify w-full">祭壇をイメージした、小型のアクリル製キャビネットの中にアーティストブックを収納した特装版を限定リリースします。キャビネットの内には、今回刊行される書籍をは​じめ、蜷川がセレクトした追悼や記憶にまつわるアイテムが収められます。日常の​空間に置かれるひとつの私的な祭壇として、記憶と現在、生と死のあいだに静かな​回路をひらくオブジェクトです。</motion.p>
+      <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:Medium',sans-serif] leading-[22px] relative shrink-0 text-[14px] w-full">商品詳細</motion.p>
+      <div className="font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] h-[325px] leading-[0] relative shrink-0 text-[13px] text-justify w-full">
+        <motion.p {...fadeIn} className="leading-[25px] mb-0">受注締切：第一期 7月30日</motion.p>
+        <motion.p {...fadeIn} className="leading-[25px] mb-0">販売数：限定30作品</motion.p>
+        <motion.p {...fadeIn} className="leading-[25px] mb-0">著者:蜷川実花</motion.p>
+        <motion.p {...fadeIn} className="leading-[25px] mb-0">ブック・デザイン：秋山伸／edition.nord</motion.p>
+        <motion.p {...fadeIn} className="leading-[25px] mb-0">エディトリアルデザイン：刈谷悠三、角田奈央／neucitora</motion.p>
+        <motion.p {...fadeIn} className="leading-[25px] mb-0">編集：我孫子裕一／afumi inc.</motion.p>
+        <motion.p {...fadeIn} className="leading-[25px] mb-0">取り扱い：Art Lab.</motion.p>
+        <motion.p {...fadeIn} className="leading-[25px] mb-0">素材：合本, B5 56p., B5 40p., A4 144p. A5 16p. B6 38p., A6 16p. A4 8p., 合計318p.</motion.p>
+        <motion.p {...fadeIn} className="leading-[25px] mb-0">商品コード：1100051641</motion.p>
+        <motion.p {...fadeIn} className="leading-[25px] mb-0">メーカー：カルチュア・コンビニエンス・クラブ株式会社</motion.p>
+        <motion.p {...fadeIn} className="leading-[25px] mb-0">出版：光村推古書院株式会社</motion.p>
+        <motion.p {...fadeIn} className="leading-[25px]">企画：CCC ART LAB, 株式会社テレビ朝日, 株式会社ラッキースター, afumi inc.</motion.p>
+      </div>
+      <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:Light',sans-serif] leading-[16px] relative shrink-0 text-[10px] w-full">© Culture Convenience Club Co.,Ltd</motion.p>
+    </div>
+  );
+}
+
+function Frame() {
+  return (
+    <div className="content-stretch flex gap-[93px] items-start relative shrink-0">
+      <LeftColumn />
+      <RightColumn />
+    </div>
+  );
+}
+
+function Frame1() {
+  return (
+    <div className="absolute content-stretch flex flex-col gap-[94px] items-center left-[3px] top-[2868px] w-[1280px]">
+      <MovieSec1 />
+      <Frame />
+      <div className="-translate-x-1/2 absolute flex h-[89px] items-center justify-center left-[calc(50%+614px)] top-[34px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+        <div className="flex-none rotate-90">
+          <p className="font-['Instrument_Serif:Regular',sans-serif] h-[12px] leading-[12px] not-italic relative text-[18px] text-black text-center tracking-[1.08px] whitespace-nowrap">Artist’s Book</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Section2() {
+  return (
+    <div className="-translate-x-1/2 absolute contents left-[calc(50%+117px)] top-[2868px]" data-name="Section03">
+      <BgSec1 />
+      <Frame1 />
+    </div>
+  );
+}
+
+function Img01Sec() {
+  return (
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-name="img01_sec04">
+      <div className="col-1 h-[422.868px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[161.703px_1.948px] mask-size-[311.716px_418.868px] ml-[-161.7px] mt-[-1.95px] relative row-1 w-[633.992px]" style={{ maskImage: `url('${img80A06631}')` }} data-name="_80A0663 1">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img80A6632} />
+      </div>
+    </div>
+  );
+}
+
+function Img02Sec() {
+  return (
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-name="img02_sec04">
+      <div className="col-1 h-[454.713px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_26.301px] mask-size-[311.716px_418.868px] ml-0 mt-[-26.3px] relative row-1 w-[341.088px]" style={{ maskImage: `url('${img80A06631}')` }} data-name="s-1600x2133_v-frms_webp_ff594319-bdc3-406d-8b06-e5ee25f80e0f.webp 1">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgS1600X2133VFrmsWebpFf594319Bdc3406D8B06E5Ee25F80E0FWebp1} />
+      </div>
+    </div>
+  );
+}
+
+function Img03Sec() {
+  return (
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-name="img03_sec04">
+      <div className="col-1 h-[428.576px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_9.741px] mask-size-[311.716px_418.868px] ml-0 mt-[-9.74px] relative row-1 w-[321.482px]" style={{ maskImage: `url('${img80A06631}')` }} data-name="s-1600x2133_v-frms_webp_272d6fec-ed0d-4f35-91d3-dbab1025219d.webp 1">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgS1600X2133VFrmsWebp272D6FecEd0D4F3591D3Dbab1025219DWebp1} />
+      </div>
+    </div>
+  );
+}
+
+function Img04Sec() {
+  return (
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-name="img04_sec04">
+      <div className="col-1 h-[427.44px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[9.741px_0px] mask-size-[311.716px_418.868px] ml-[-9.74px] mt-0 relative row-1 w-[320.63px]" style={{ maskImage: `url('${img80A06631}')` }} data-name="s-1600x2133_v-frms_webp_59c9cca8-143a-4d9e-9870-86c7b74cdcde.webp 1">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgS1600X2133VFrmsWebp59C9Cca8143A4D9E987086C7B74CdcdeWebp1} />
+      </div>
+    </div>
+  );
+}
+
+function Frame2() {
+  return (
+    <div className="content-stretch flex gap-[24px] items-center leading-[0] relative shrink-0">
+      <Img01Sec />
+      <Img02Sec />
+      <Img03Sec />
+      <Img04Sec />
+    </div>
+  );
+}
+
+function Frame3() {
+  return (
+    <div className="absolute content-stretch flex gap-[93px] items-start left-[24px] top-[4324px]">
+      <div className="flex h-[102px] items-center justify-center relative shrink-0 w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+        <div className="flex-none rotate-90">
+          <p className="font-['Instrument_Serif:Regular',sans-serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Product Detail</p>
+        </div>
+      </div>
+      <Frame2 />
+    </div>
+  );
+}
+
+function Section3() {
+  return (
+    <div className="absolute contents left-[-243px] top-[3987px]" data-name="Section04">
+      <div className="absolute flex h-[368px] items-center justify-center left-[-243px] top-[3987px] w-[903px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+        <div className="flex-none rotate-[22.17deg]">
+          <div className="h-0 relative w-[975.107px]">
+            <div className="absolute inset-[-0.5px_0_0_0]">
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 975.107 0.5">
+                <line id="Line 1" stroke="var(--stroke-0, white)" strokeWidth="0.5" x2="975.107" y1="0.25" y2="0.25" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Frame3 />
+    </div>
+  );
+}
+
+function BgSec2() {
+  return (
+    <div className="absolute left-0 top-[4743px] w-[1280px] h-[875px]" data-name="bg_sec05">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBgSec05} />
+    </div>
+  );
+}
+
+function ButtonDetail() {
+  return (
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 cursor-pointer group" data-name="button_detail">
+      <div className="border-[0.5px] border-solid border-white col-1 h-[44px] ml-0 mt-0 relative rounded-[5px] row-1 w-[139px] transition-colors duration-200 group-hover:bg-white/15" />
+      <p className="col-1 font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] leading-[22px] ml-[30px] mt-[11px] not-italic relative row-1 text-[13px] text-white whitespace-nowrap pointer-events-none">詳細はこちら</p>
+    </div>
+  );
+}
+
+function Frame4() {
+  return (
+    <div className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-[485px]">
+      <div className="font-['Hiragino_Mincho_Pro:W3',sans-serif] leading-[0] not-italic relative shrink-0 text-[36px] text-white w-[475px]">
+        <motion.p {...fadeIn} className="leading-[49px] mb-0">mirror, mirror, mirror</motion.p>
+        <motion.p {...fadeIn} className="leading-[49px]">mika ninagawa 展</motion.p>
+      </div>
+      <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] h-[124px] leading-[25px] min-w-full not-italic relative shrink-0 text-[14px] text-white w-[min-content]">蜷川実花が、10数年にわたり活動の拠点としてきた下北沢の地において、アーティストブックの刊行を記念した展覧会を開催します。本展は、アーティストブックに結実した表現の軌跡を、展示空間の中であらためて構成する試みです。「破壊、再生、また破壊」という創作テーマのもと、蜷川の表現史と現在の表現が、ひとつの空間として提示されます​。</motion.p>
+      <ButtonDetail />
+    </div>
+  );
+}
+
+function Frame5() {
+  return (
+    <div className="absolute content-stretch flex gap-[71px] items-center left-0 top-[4975px]">
+      <div className="h-[429px] relative shrink-0 w-[642px]" data-name="img_sec05">
+        <img alt="" className="absolute inset-0 max-w-none object-cover opacity-90 pointer-events-none size-full" src={imgImgSec05} />
+      </div>
+      <Frame4 />
+    </div>
+  );
+}
+
+function Section4() {
+  return (
+    <div className="absolute contents left-0 top-[4743px]" data-name="Section05">
+      <BgSec2 />
+      <Frame5 />
+      <div className="absolute flex h-[74px] items-center justify-center left-[calc(50%+601px)] top-[4893px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+        <div className="flex-none rotate-90">
+          <p className="font-['Instrument_Serif:Regular',sans-serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Exhibition</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <div className="absolute contents left-[30px] top-[5575px]" data-name="Footer">
+      <div className="-translate-x-1/2 absolute bottom-[1.41%] left-[calc(50%+545.5px)] top-[98.19%] w-[123px]" data-name="logo_dipsy">
+        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 123 23">
+          <g id="logo_dipsy">
+            <path d={svgPaths.p412a900} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p133bb600} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p29017000} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p6fa3780} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p1adee000} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p24c68b00} fill="var(--fill-0, white)" />
+          </g>
+        </svg>
+      </div>
+      <motion.p {...fadeIn} className="absolute font-['Roboto:Light',sans-serif] font-light leading-[16px] left-[138px] text-[11px] text-white top-[5582px] whitespace-pre" style={{ fontVariationSettings: "'wdth' 100" }}>{`©  2026 DIPSY Inc. All rights reserved.`}</motion.p>
+      <motion.p {...fadeIn} className="absolute font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] leading-[16px] left-[30px] not-italic text-[12px] text-white top-[5582px] whitespace-pre">{`利用規約　　｜　　`}</motion.p>
+    </div>
+  );
+}
+
+export default function Component01IndexPcO() {
+  return (
+    <div className="bg-[#111] relative size-full" data-name="01_Index_pc_o">
+      <Hero />
+      <Section />
+      <Section1 />
+      <Section2 />
+      <Section3 />
+      <Section4 />
+      <Footer />
+    </div>
+  );
+}
