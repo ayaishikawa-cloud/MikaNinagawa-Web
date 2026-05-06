@@ -34,17 +34,15 @@ import { img80A06841, img141216041936900X12001, imgBox022, img80A06631 } from ".
 
 function MovieHero() {
   return (
-    <div className="absolute contents left-0 top-0" data-name="movie_hero">
-      <div className="-translate-x-1/2 absolute h-[854px] left-1/2 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0px] mask-size-[1280px_720px] opacity-90 top-0 w-[1280px]" style={{ maskImage: `url('${img80A06841}')` }} data-name="_80A0684 1">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img80A6842} />
-      </div>
+    <div className="-translate-x-1/2 absolute h-[854px] left-1/2 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0px] mask-size-[1280px_720px] opacity-90 top-0 w-[1280px]" style={{ maskImage: `url('${img80A06841}')` }}>
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img80A6842} />
     </div>
   );
 }
 
 function AnkerSection() {
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 cursor-pointer group" data-name="anker_section03">
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 cursor-pointer group">
       <div className="bg-white col-1 h-[44px] ml-0 mt-0 relative rounded-[5px] row-1 w-[139px] transition-colors duration-200 group-hover:bg-neutral-300" />
       <p className="col-1 font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] leading-[22px] ml-[31px] mt-[11px] not-italic relative row-1 text-[13px] text-black whitespace-nowrap pointer-events-none">予約注文する</p>
     </div>
@@ -53,7 +51,7 @@ function AnkerSection() {
 
 function Floating() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[15px] items-start right-[25px] top-[599px] w-[320px]" data-name="Floating">
+    <div className="absolute content-stretch flex flex-col gap-[15px] items-start right-[25px] top-[599px] w-[320px]">
       <p className="font-['Instrument_Serif:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[20px] text-left text-shadow-[0px_0px_20px_rgba(0,0,0,0.65)] text-white tracking-[0.6px] whitespace-nowrap">Mika Ninagawa Artist’s Book</p>
       <AnkerSection />
     </div>
@@ -62,10 +60,10 @@ function Floating() {
 
 function Hero() {
   return (
-    <div className="absolute contents left-0 top-0" data-name="Hero">
+    <section>
       <MovieHero />
       <Floating />
-      <div className="absolute h-[156px] left-[1121px] top-[204px] w-[54px]" data-name="special">
+      <div className="absolute h-[156px] left-[1121px] top-[204px] w-[54px]">
         <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 54 156">
           <g id="special">
             <path d={svgPaths.p22051900} fill="var(--fill-0, white)" />
@@ -75,7 +73,7 @@ function Hero() {
           </g>
         </svg>
       </div>
-      <div className="absolute h-[346px] left-[1053px] top-[196px] w-[35px]" data-name="mirrormirrormirror">
+      <div className="absolute h-[346px] left-[1053px] top-[196px] w-[35px]">
         <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 35 346">
           <g id="mirrormirrormirror">
             <path d={svgPaths.p33743280} fill="var(--fill-0, white)" />
@@ -92,7 +90,7 @@ function Hero() {
           </g>
         </svg>
       </div>
-      <motion.div initial={{ y: -120, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.1, ease: "easeOut" }} className="absolute h-[646px] left-[119px] top-[44px] w-[58px]" data-name="mikaninagawa">
+      <motion.div initial={{ y: -120, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.1, ease: "easeOut" }} className="absolute h-[646px] left-[119px] top-[44px] w-[58px]">
         <div className="absolute inset-[-8.05%_-89.66%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 162 750">
             <g filter="url(#filter0_d_1_150)" id="mikaninagawa">
@@ -140,7 +138,7 @@ function Hero() {
       </div>
       <motion.div initial={{ clipPath: "inset(0 100% 0 0)" }} animate={{ clipPath: "inset(0 0% 0 0)" }} transition={{ duration: 1, ease: "easeOut", delay: 0.1 }} className="absolute flex inset-[1.18%_-3.68%_91.93%_37.42%] items-center justify-center" style={{ containerType: "size" }}>
         <div className="-rotate-15 flex-none h-[hypot(5.5846cqw,45.1707cqh)] w-[hypot(94.4154cqw,-54.8293cqh)]">
-          <div className="relative size-full" data-name="title">
+          <div className="relative size-full">
             <div className="absolute inset-[-27.32%_-6.03%]">
               <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 929 283">
                 <g filter="url(#filter0_d_1_144)" id="title">
@@ -200,13 +198,13 @@ function Hero() {
           </div>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 }
 
 function Movie() {
   return (
-    <div className="absolute left-0 top-[720px] w-[1280px] h-[853px]" data-name="movie">
+    <div className="absolute left-0 top-[720px] w-[1280px] h-[853px]">
       <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img110191118Vca598652800X12003} />
     </div>
   );
@@ -214,12 +212,10 @@ function Movie() {
 
 function MaskGroup() {
   return (
-    <div className="contents" data-name="Mask group">
-      <div className="-translate-x-1/2 absolute flex h-[883px] items-center justify-center left-[calc(50%+3.5px)] top-[487px] w-[1177px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
-        <div className="-rotate-90 flex-none">
-          <div className="h-[1177px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[1px_298px] mask-size-[1176px_585px] relative w-[883px]" style={{ maskImage: `url('${img141216041936900X12001}')` }} data-name="141216_041936-900x1200 1">
-            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img141216041936900X12002} />
-          </div>
+    <div className="-translate-x-1/2 absolute flex h-[883px] items-center justify-center left-[calc(50%+3.5px)] top-[487px] w-[1177px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+      <div className="-rotate-90 flex-none">
+        <div className="h-[1177px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[1px_298px] mask-size-[1176px_585px] relative w-[883px]" style={{ maskImage: `url('${img141216041936900X12001}')` }}>
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img141216041936900X12002} />
         </div>
       </div>
     </div>
@@ -228,21 +224,21 @@ function MaskGroup() {
 
 function BgSec() {
   return (
-    <div className="absolute contents left-0 top-[720px]" data-name="bg_sec01">
+    <>
       <Movie />
-      <div className="absolute h-[853px] left-0 top-[720px] w-[1281px]" data-name="paint_00 2">
+      <div className="absolute h-[853px] left-0 top-[720px] w-[1281px]">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgPaint002} />
       </div>
-    </div>
+    </>
   );
 }
 
-function ParallaxPhoto({ className, src, speed, name }: { className: string; src: string; speed: number; name: string }) {
+function ParallaxPhoto({ className, src, speed }: { className: string; src: string; speed: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], [speed, -speed]);
   return (
-    <motion.div ref={ref} className={className} style={{ y }} data-name={name}>
+    <motion.div ref={ref} className={className} style={{ y }}>
       <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={src} />
     </motion.div>
   );
@@ -250,15 +246,15 @@ function ParallaxPhoto({ className, src, speed, name }: { className: string; src
 
 function Section() {
   return (
-    <div className="absolute contents left-[-29px] top-[720px]" data-name="Section01">
+    <section>
       <BgSec />
-      <ParallaxPhoto name="photo07_sec01" src={imgPhoto07Sec01} speed={120} className="absolute h-[222px] left-[777px] top-[1208px] w-[332.25px]" />
-      <ParallaxPhoto name="photo06_sec01" src={imgPhoto06Sec01} speed={-90} className="absolute h-[386.25px] left-[-29px] top-[885px] w-[515.25px]" />
-      <ParallaxPhoto name="photo05_sec01" src={imgPhoto05Sec01} speed={150} className="absolute h-[288px] left-[153px] top-[1100px] w-[431.25px]" />
-      <ParallaxPhoto name="photo04_sec01" src={imgPhoto04Sec01} speed={-140} className="absolute h-[219px] left-[982px] top-[842px] w-[330px]" />
-      <ParallaxPhoto name="photo03_sec01" src={imgPhoto03Sec01} speed={80} className="absolute h-[338px] left-[106px] top-[842px] w-[478px]" />
-      <ParallaxPhoto name="photo02_sec01" src={imgPhoto02Sec01} speed={-110} className="absolute h-[339px] left-[698px] top-[985px] w-[478px]" />
-      <ParallaxPhoto name="photo01_sec01" src={imgPhoto01Sec01} speed={100} className="absolute h-[339px] left-[378px] top-[1155px] w-[477px]" />
+      <ParallaxPhoto src={imgPhoto07Sec01} speed={120} className="absolute h-[222px] left-[777px] top-[1208px] w-[332.25px]" />
+      <ParallaxPhoto src={imgPhoto06Sec01} speed={-90} className="absolute h-[386.25px] left-[-29px] top-[885px] w-[515.25px]" />
+      <ParallaxPhoto src={imgPhoto05Sec01} speed={150} className="absolute h-[288px] left-[153px] top-[1100px] w-[431.25px]" />
+      <ParallaxPhoto src={imgPhoto04Sec01} speed={-140} className="absolute h-[219px] left-[982px] top-[842px] w-[330px]" />
+      <ParallaxPhoto src={imgPhoto03Sec01} speed={80} className="absolute h-[338px] left-[106px] top-[842px] w-[478px]" />
+      <ParallaxPhoto src={imgPhoto02Sec01} speed={-110} className="absolute h-[339px] left-[698px] top-[985px] w-[478px]" />
+      <ParallaxPhoto src={imgPhoto01Sec01} speed={100} className="absolute h-[339px] left-[378px] top-[1155px] w-[477px]" />
       <div className="absolute font-['Hiragino_Mincho_Pro:W3',sans-serif] leading-[0] left-[59px] not-italic text-[20px] text-white top-[1142px] whitespace-nowrap">
         <motion.p {...fadeIn} className="leading-[24px] mb-0">破</motion.p>
         <motion.p {...fadeIn} className="leading-[24px] mb-0">壊</motion.p>
@@ -269,17 +265,15 @@ function Section() {
         <motion.p {...fadeIn} className="leading-[24px] mb-0">ま</motion.p>
         <motion.p {...fadeIn} className="leading-[24px]">た破壊</motion.p>
       </div>
-    </div>
+    </section>
   );
 }
 
 function Bg02Sec() {
   return (
-    <div className="absolute contents h-[988px] left-[832px] top-[2320px] w-[587.857px]" data-name="bg02_Sec02">
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[780.976px] items-center justify-center left-[calc(50%+447.3px)] top-[calc(50%-123.88px)] w-[675.92px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "0" } as React.CSSProperties}>
-        <div className="flex-none rotate-90">
-          <div className="bg-[#1d1d1d] h-[675.92px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[82.656px_-4.635px] mask-size-[587.857px_988px] relative w-[780.976px]" style={{ maskImage: `url('${imgRectangle11}')` }} />
-        </div>
+    <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[780.976px] items-center justify-center left-[calc(50%+447.3px)] top-[calc(50%-123.88px)] w-[675.92px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "0" } as React.CSSProperties}>
+      <div className="flex-none rotate-90">
+        <div className="bg-[#1d1d1d] h-[675.92px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[82.656px_-4.635px] mask-size-[587.857px_988px] relative w-[780.976px]" style={{ maskImage: `url('${imgRectangle11}')` }} />
       </div>
     </div>
   );
@@ -287,11 +281,9 @@ function Bg02Sec() {
 
 function Bg01Sec() {
   return (
-    <div className="absolute contents h-[988px] left-[-11px] top-[1209px] w-[587.857px]" data-name="bg01_Sec02">
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[780.976px] items-center justify-center left-[calc(50%-318.45px)] top-[calc(50%-887.12px)] w-[675.92px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "0" } as React.CSSProperties}>
-        <div className="-rotate-90 flex-none">
-          <div className="bg-[#1d1d1d] h-[675.92px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[5.407px_-202.389px] mask-size-[587.857px_988px] relative w-[780.976px]" style={{ maskImage: `url('${imgRectangle11}')` }} />
-        </div>
+    <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[780.976px] items-center justify-center left-[calc(50%-318.45px)] top-[calc(50%-887.12px)] w-[675.92px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "0" } as React.CSSProperties}>
+      <div className="-rotate-90 flex-none">
+        <div className="bg-[#1d1d1d] h-[675.92px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[5.407px_-202.389px] mask-size-[587.857px_988px] relative w-[780.976px]" style={{ maskImage: `url('${imgRectangle11}')` }} />
       </div>
     </div>
   );
@@ -299,18 +291,18 @@ function Bg01Sec() {
 
 function MovieSec() {
   return (
-    <div className="absolute contents left-[347px] top-[1901px]" data-name="movie_sec02">
+    <>
       <div className="absolute bg-black h-[351px] left-[347px] top-[1901px] w-[621px]" />
-      <div className="-translate-x-1/2 absolute h-[346px] left-[calc(50%+18px)] top-[1903px] w-[620px]" data-name="スクリーンショット 2026-05-06 21.39.59 1">
+      <div className="-translate-x-1/2 absolute h-[346px] left-[calc(50%+18px)] top-[1903px] w-[620px]">
         <img alt="" className="absolute inset-0 max-w-none object-cover opacity-25 pointer-events-none size-full" src={img202605062139591} />
       </div>
-    </div>
+    </>
   );
 }
 
 function Section1() {
   return (
-    <div className="absolute contents left-[-11px] top-[1209px]" data-name="Section02">
+    <section>
       <Bg02Sec />
       <Bg01Sec />
       <div className="absolute flex h-[354.581px] items-center justify-center left-[532px] top-[1716.01px] w-[908.353px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
@@ -367,25 +359,23 @@ function Section1() {
           <p className="font-['Instrument_Serif:Regular',sans-serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Comment</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
 function BgSec1() {
   return (
-    <div className="absolute contents left-0 top-[3477px]" data-name="bg_sec03">
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#1d1d1d] h-[1024.21px] left-[calc(50%+117.59px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-5.873px_7.047px] mask-size-[1514px_1008.941px] top-[calc(50%+1143.06px)] w-[1503.429px]" style={{ maskImage: `url('${imgRectangle12}')` }} />
-    </div>
+    <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#1d1d1d] h-[1024.21px] left-[calc(50%+117.59px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-5.873px_7.047px] mask-size-[1514px_1008.941px] top-[calc(50%+1143.06px)] w-[1503.429px]" style={{ maskImage: `url('${imgRectangle12}')` }} />
   );
 }
 
 function MaskGroup1() {
   return (
-    <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-0 place-items-start relative row-1" data-name="Mask group">
-      <div className="col-1 h-[720px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[1px_50px] mask-size-[1280px_620px] ml-[-1px] mt-[-50px] relative row-1 w-[1282px]" style={{ maskImage: `url('${imgBox022}')` }} data-name="box02 2">
+    <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-0 place-items-start relative row-1">
+      <div className="col-1 h-[720px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[1px_50px] mask-size-[1280px_620px] ml-[-1px] mt-[-50px] relative row-1 w-[1282px]" style={{ maskImage: `url('${imgBox022}')` }}>
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBox23} />
       </div>
-      <div className="col-1 h-[596px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-109px_-12px] mask-size-[1280px_620px] ml-[109px] mt-[12px] relative row-1 w-[1062px]" style={{ maskImage: `url('${imgBox022}')` }} data-name="box02 3">
+      <div className="col-1 h-[596px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-109px_-12px] mask-size-[1280px_620px] ml-[109px] mt-[12px] relative row-1 w-[1062px]" style={{ maskImage: `url('${imgBox022}')` }}>
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBox23} />
       </div>
     </div>
@@ -394,7 +384,7 @@ function MaskGroup1() {
 
 function MovieSec1() {
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-name="movie_sec03">
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
       <MaskGroup1 />
     </div>
   );
@@ -402,7 +392,7 @@ function MovieSec1() {
 
 function TagSpecial() {
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-name="tag_special">
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
       <p className="col-1 font-['Zen_Old_Mincho:Bold',sans-serif] leading-[17.059px] ml-[16.21px] mt-[5.12px] not-italic relative row-1 text-[17.059px] text-white tracking-[-0.6824px] whitespace-nowrap">特装版</p>
       <div className="border-[0.426px] border-solid border-white col-1 h-[29px] ml-0 mt-0 relative row-1 w-[81.882px]" />
     </div>
@@ -411,7 +401,7 @@ function TagSpecial() {
 
 function ButtonOrder() {
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 cursor-pointer group" data-name="button_order">
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 cursor-pointer group">
       <div className="bg-white col-1 h-[44px] ml-0 mt-0 relative rounded-[5px] row-1 w-[139px] transition-colors duration-200 group-hover:bg-neutral-300" />
       <p className="col-1 font-['Noto_Sans_CJK_JP:Regular',sans-serif] leading-[22px] ml-[31px] mt-[11px] not-italic relative row-1 text-[13px] text-black whitespace-nowrap pointer-events-none">予約注文する</p>
     </div>
@@ -420,7 +410,7 @@ function ButtonOrder() {
 
 function LeftColumn() {
   return (
-    <div className="content-stretch flex flex-col gap-[29px] items-start relative shrink-0 w-[453px]" data-name="LeftColumn">
+    <div className="content-stretch flex flex-col gap-[29px] items-start relative shrink-0 w-[453px]">
       <TagSpecial />
       <motion.p {...fadeIn} className="font-['Hiragino_Mincho_Pro:W3',sans-serif] leading-[48px] min-w-full not-italic relative shrink-0 text-[40px] text-white w-[min-content]">mirror, mirror, mirror mika ninagawa</motion.p>
       <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] leading-[0] min-w-full not-italic relative shrink-0 text-[0px] text-white tracking-[0.96px] w-[min-content]">
@@ -436,7 +426,7 @@ function LeftColumn() {
 
 function RightColumn() {
   return (
-    <div className="content-stretch flex flex-col gap-[34px] items-start not-italic relative shrink-0 text-white w-[466px]" data-name="RightColumn">
+    <div className="content-stretch flex flex-col gap-[34px] items-start not-italic relative shrink-0 text-white w-[466px]">
       <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] h-[132px] leading-[22px] relative shrink-0 text-[13px] text-justify w-full">祭壇をイメージした、小型のアクリル製キャビネットの中にアーティストブックを収納した特装版を限定リリースします。キャビネットの内には、今回刊行される書籍をは​じめ、蜷川がセレクトした追悼や記憶にまつわるアイテムが収められます。日常の​空間に置かれるひとつの私的な祭壇として、記憶と現在、生と死のあいだに静かな​回路をひらくオブジェクトです。</motion.p>
       <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:Medium',sans-serif] leading-[22px] relative shrink-0 text-[14px] w-full">商品詳細</motion.p>
       <div className="font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] h-[325px] leading-[0] relative shrink-0 text-[13px] text-justify w-full">
@@ -483,17 +473,17 @@ function Frame1() {
 
 function Section2() {
   return (
-    <div className="-translate-x-1/2 absolute contents left-[calc(50%+117px)] top-[2868px]" data-name="Section03">
+    <section>
       <BgSec1 />
       <Frame1 />
-    </div>
+    </section>
   );
 }
 
 function Img01Sec() {
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-name="img01_sec04">
-      <div className="col-1 h-[422.868px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[161.703px_1.948px] mask-size-[311.716px_418.868px] ml-[-161.7px] mt-[-1.95px] relative row-1 w-[633.992px]" style={{ maskImage: `url('${img80A06631}')` }} data-name="_80A0663 1">
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
+      <div className="col-1 h-[422.868px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[161.703px_1.948px] mask-size-[311.716px_418.868px] ml-[-161.7px] mt-[-1.95px] relative row-1 w-[633.992px]" style={{ maskImage: `url('${img80A06631}')` }}>
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img80A6632} />
       </div>
     </div>
@@ -502,8 +492,8 @@ function Img01Sec() {
 
 function Img02Sec() {
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-name="img02_sec04">
-      <div className="col-1 h-[454.713px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_26.301px] mask-size-[311.716px_418.868px] ml-0 mt-[-26.3px] relative row-1 w-[341.088px]" style={{ maskImage: `url('${img80A06631}')` }} data-name="s-1600x2133_v-frms_webp_ff594319-bdc3-406d-8b06-e5ee25f80e0f.webp 1">
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
+      <div className="col-1 h-[454.713px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_26.301px] mask-size-[311.716px_418.868px] ml-0 mt-[-26.3px] relative row-1 w-[341.088px]" style={{ maskImage: `url('${img80A06631}')` }}>
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgS1600X2133VFrmsWebpFf594319Bdc3406D8B06E5Ee25F80E0FWebp1} />
       </div>
     </div>
@@ -512,8 +502,8 @@ function Img02Sec() {
 
 function Img03Sec() {
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-name="img03_sec04">
-      <div className="col-1 h-[428.576px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_9.741px] mask-size-[311.716px_418.868px] ml-0 mt-[-9.74px] relative row-1 w-[321.482px]" style={{ maskImage: `url('${img80A06631}')` }} data-name="s-1600x2133_v-frms_webp_272d6fec-ed0d-4f35-91d3-dbab1025219d.webp 1">
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
+      <div className="col-1 h-[428.576px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_9.741px] mask-size-[311.716px_418.868px] ml-0 mt-[-9.74px] relative row-1 w-[321.482px]" style={{ maskImage: `url('${img80A06631}')` }}>
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgS1600X2133VFrmsWebp272D6FecEd0D4F3591D3Dbab1025219DWebp1} />
       </div>
     </div>
@@ -522,8 +512,8 @@ function Img03Sec() {
 
 function Img04Sec() {
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-name="img04_sec04">
-      <div className="col-1 h-[427.44px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[9.741px_0px] mask-size-[311.716px_418.868px] ml-[-9.74px] mt-0 relative row-1 w-[320.63px]" style={{ maskImage: `url('${img80A06631}')` }} data-name="s-1600x2133_v-frms_webp_59c9cca8-143a-4d9e-9870-86c7b74cdcde.webp 1">
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
+      <div className="col-1 h-[427.44px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[9.741px_0px] mask-size-[311.716px_418.868px] ml-[-9.74px] mt-0 relative row-1 w-[320.63px]" style={{ maskImage: `url('${img80A06631}')` }}>
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgS1600X2133VFrmsWebp59C9Cca8143A4D9E987086C7B74CdcdeWebp1} />
       </div>
     </div>
@@ -556,7 +546,7 @@ function Frame3() {
 
 function Section3() {
   return (
-    <div className="absolute contents left-[-243px] top-[3987px]" data-name="Section04">
+    <section>
       <div className="absolute flex h-[368px] items-center justify-center left-[-243px] top-[3987px] w-[903px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-[22.17deg]">
           <div className="h-0 relative w-[975.107px]">
@@ -569,13 +559,13 @@ function Section3() {
         </div>
       </div>
       <Frame3 />
-    </div>
+    </section>
   );
 }
 
 function BgSec2() {
   return (
-    <div className="absolute left-0 top-[4743px] w-[1280px] h-[875px]" data-name="bg_sec05">
+    <div className="absolute left-0 top-[4743px] w-[1280px] h-[875px]">
       <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBgSec05} />
     </div>
   );
@@ -583,7 +573,7 @@ function BgSec2() {
 
 function ButtonDetail() {
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 cursor-pointer group" data-name="button_detail">
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 cursor-pointer group">
       <div className="border-[0.5px] border-solid border-white col-1 h-[44px] ml-0 mt-0 relative rounded-[5px] row-1 w-[139px] transition-colors duration-200 group-hover:bg-white/15" />
       <p className="col-1 font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] leading-[22px] ml-[30px] mt-[11px] not-italic relative row-1 text-[13px] text-white whitespace-nowrap pointer-events-none">詳細はこちら</p>
     </div>
@@ -606,7 +596,7 @@ function Frame4() {
 function Frame5() {
   return (
     <div className="absolute content-stretch flex gap-[71px] items-center left-0 top-[4975px]">
-      <div className="h-[429px] relative shrink-0 w-[642px]" data-name="img_sec05">
+      <div className="h-[429px] relative shrink-0 w-[642px]">
         <img alt="" className="absolute inset-0 max-w-none object-cover opacity-90 pointer-events-none size-full" src={imgImgSec05} />
       </div>
       <Frame4 />
@@ -616,7 +606,7 @@ function Frame5() {
 
 function Section4() {
   return (
-    <div className="absolute contents left-0 top-[4743px]" data-name="Section05">
+    <section>
       <BgSec2 />
       <Frame5 />
       <div className="absolute flex h-[74px] items-center justify-center left-[calc(50%+601px)] top-[4893px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
@@ -624,14 +614,14 @@ function Section4() {
           <p className="font-['Instrument_Serif:Regular',sans-serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Exhibition</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
 function Footer() {
   return (
-    <div className="absolute contents left-[30px] top-[5575px]" data-name="Footer">
-      <div className="-translate-x-1/2 absolute bottom-[1.41%] left-[calc(50%+545.5px)] top-[98.19%] w-[123px]" data-name="logo_dipsy">
+    <footer>
+      <div className="-translate-x-1/2 absolute bottom-[1.41%] left-[calc(50%+545.5px)] top-[98.19%] w-[123px]">
         <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 123 23">
           <g id="logo_dipsy">
             <path d={svgPaths.p412a900} fill="var(--fill-0, white)" />
@@ -645,13 +635,13 @@ function Footer() {
       </div>
       <motion.p {...fadeIn} className="absolute font-['Roboto:Light',sans-serif] font-light leading-[16px] left-[138px] text-[11px] text-white top-[5582px] whitespace-pre" style={{ fontVariationSettings: "'wdth' 100" }}>{`©  2026 DIPSY Inc. All rights reserved.`}</motion.p>
       <motion.p {...fadeIn} className="absolute font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] leading-[16px] left-[30px] not-italic text-[12px] text-white top-[5582px] whitespace-pre">{`利用規約　　｜　　`}</motion.p>
-    </div>
+    </footer>
   );
 }
 
 export default function Component01IndexPcO() {
   return (
-    <div className="bg-[#111] relative size-full" data-name="01_Index_pc_o">
+    <main className="bg-[#111] relative size-full">
       <Hero />
       <Section />
       <Section1 />
@@ -659,6 +649,6 @@ export default function Component01IndexPcO() {
       <Section3 />
       <Section4 />
       <Footer />
-    </div>
+    </main>
   );
 }
