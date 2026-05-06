@@ -20,7 +20,6 @@ import imgPhoto04Sec01 from "./b2c977e6cfcda7545fa3e1488073edcad7fab7a9.png";
 import imgPhoto03Sec01 from "./a45ae21d2ca1ab4f44409f1cc1a37df86494e66c.png";
 import imgPhoto02Sec01 from "./b401b651683b492c8d3c6b621705dafe1fe08c98.png";
 import imgPhoto01Sec01 from "./798856b17fea137fe816f56fb4d79fa710b2d472.png";
-import img202605062139591 from "./a8ab8a566586d2ed96a768b9300b91c563907737.png";
 import imgRectangle12 from "./98cd64c15bbe778d328ed75265e81d0cbe91b881.png";
 import imgBox23 from "./862a701c18b73d42038a224aac3afbe7f78791e0.png";
 import img80A6632 from "./85a92643cfc8ea2127cb6553bae8279a76d47044.png";
@@ -31,6 +30,7 @@ import imgRectangle13 from "./5317d1625578a70e60886f852db5623e81fc5541.png";
 import imgImgSec05 from "./1d9b0dde9104012a5cd940cb30c770ee5aa53b58.png";
 import imgBgSec05 from "../bg_sec05.png";
 import heroScrollVideo from "./hero-scroll.mp4";
+import movieSec02Video from "./movie_sec02.mp4";
 import { img80A06841, img141216041936900X12001, imgBox022 } from "./svg-n94c3";
 
 function MovieHero() {
@@ -149,7 +149,7 @@ function Hero() {
           </div>
         </div>
       </div>
-      <motion.div initial={{ clipPath: "inset(0 100% 0 0)" }} animate={{ clipPath: "inset(0 0% 0 0)" }} transition={{ duration: 1, ease: "easeOut", delay: 0.1 }} className="absolute flex inset-[1.5%_-8%_90%_30%] items-center justify-center" style={{ containerType: "size" }}>
+      <motion.div initial={{ clipPath: "inset(0 100% 0 0)" }} animate={{ clipPath: "inset(0 0% 0 0)" }} transition={{ duration: 1, ease: "easeOut", delay: 0.1 }} className="absolute flex inset-[-0.7%_-8%_92.2%_30%] items-center justify-center" style={{ containerType: "size" }}>
         <div className="-rotate-15 flex-none h-[hypot(5.5846cqw,45.1707cqh)] w-[hypot(94.4154cqw,-54.8293cqh)]">
           <div className="relative size-full">
             <div className="absolute inset-[-27.32%_-6.03%]">
@@ -287,7 +287,7 @@ function MovieSec() {
     <>
       <div className="absolute bg-black h-[351px] left-[347px] top-[3231px] w-[621px]" />
       <div className="-translate-x-1/2 absolute h-[346px] left-[calc(50%+18px)] top-[3233px] w-[620px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover opacity-25 pointer-events-none size-full" src={img202605062139591} />
+        <video src={movieSec02Video} autoPlay muted loop playsInline className="absolute inset-0 max-w-none object-cover opacity-25 pointer-events-none size-full" />
       </div>
     </>
   );
@@ -308,8 +308,8 @@ function Section1() {
         </div>
       </div>
       <MovieSec />
-      <motion.p {...fadeIn} className="absolute font-['Noto_Sans_JP',sans-serif] h-[190px] leading-[19px] left-[calc(50%+269px)] not-italic text-[11px] text-justify text-white top-[3530px] w-[264px]">写真を中心として、映画、映像、空間インスタレーションも多く手掛ける。クリエイティブチーム「EiM（エイム）」の一員としても活動中。木村伊兵衛写真賞ほか数々受賞。2010年ニューヨークのRizzoliから写真集を出版。また、『ヘルタースケルター』（2012年）、『Diner ダイナー』（2019年）をはじめ長編映画を5作、Netflixオリジナルドラマ『FOLLOWERS』（2020年）を監督。これまでに写真集120冊以上を刊行、個展150回以上、グループ展130回以上と国内外で精力的に作品発表を続ける。</motion.p>
-      <div className="-translate-x-1/2 absolute flex h-[117px] items-center justify-center left-[calc(50%+257px)] top-[3350px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+      <motion.p {...fadeIn} className="absolute font-['Noto_Sans_JP',sans-serif] h-[190px] leading-[19px] left-[calc(50%+269px)] not-italic text-[11px] text-justify text-white top-[3680px] w-[264px]">写真を中心として、映画、映像、空間インスタレーションも多く手掛ける。クリエイティブチーム「EiM（エイム）」の一員としても活動中。木村伊兵衛写真賞ほか数々受賞。2010年ニューヨークのRizzoliから写真集を出版。また、『ヘルタースケルター』（2012年）、『Diner ダイナー』（2019年）をはじめ長編映画を5作、Netflixオリジナルドラマ『FOLLOWERS』（2020年）を監督。これまでに写真集120冊以上を刊行、個展150回以上、グループ展130回以上と国内外で精力的に作品発表を続ける。</motion.p>
+      <div className="-translate-x-1/2 absolute flex h-[117px] items-center justify-center left-[calc(50%+257px)] top-[3500px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-90">
           <p className="font-['Instrument_Serif',serif] leading-[12px] not-italic relative text-[18px] text-center text-white tracking-[1.8px] whitespace-nowrap">Mika Ninagawa</p>
         </div>
