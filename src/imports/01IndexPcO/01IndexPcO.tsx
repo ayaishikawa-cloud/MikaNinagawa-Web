@@ -30,7 +30,7 @@ import imgS1600X2133VFrmsWebp59C9Cca8143A4D9E987086C7B74CdcdeWebp1 from "./488a9
 import imgRectangle13 from "./5317d1625578a70e60886f852db5623e81fc5541.png";
 import imgImgSec05 from "./1d9b0dde9104012a5cd940cb30c770ee5aa53b58.png";
 import imgBgSec05 from "../bg_sec05.png";
-import { img80A06841, img141216041936900X12001, imgBox022, img80A06631 } from "./svg-n94c3";
+import { img80A06841, img141216041936900X12001, imgBox022 } from "./svg-n94c3";
 
 function MovieHero() {
   return (
@@ -44,7 +44,7 @@ function AnkerSection() {
   return (
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 cursor-pointer group">
       <div className="bg-white col-1 h-[44px] ml-0 mt-0 relative rounded-[5px] row-1 w-[139px] transition-colors duration-200 group-hover:bg-neutral-300" />
-      <p className="col-1 font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] leading-[22px] ml-[31px] mt-[11px] not-italic relative row-1 text-[13px] text-black whitespace-nowrap pointer-events-none">予約注文する</p>
+      <p className="col-1 font-['Noto_Sans_JP',sans-serif] leading-[22px] ml-[31px] mt-[11px] not-italic relative row-1 text-[13px] text-black whitespace-nowrap pointer-events-none">予約注文する</p>
     </div>
   );
 }
@@ -52,7 +52,7 @@ function AnkerSection() {
 function Floating() {
   return (
     <div className="absolute content-stretch flex flex-col gap-[15px] items-start right-[25px] top-[599px] w-[320px]">
-      <p className="font-['Instrument_Serif:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[20px] text-left text-shadow-[0px_0px_20px_rgba(0,0,0,0.65)] text-white tracking-[0.6px] whitespace-nowrap">Mika Ninagawa Artist’s Book</p>
+      <p className="font-['Instrument_Serif',serif] leading-[24px] not-italic relative shrink-0 text-[20px] text-left text-shadow-[0px_0px_20px_rgba(0,0,0,0.65)] text-white tracking-[0.6px] whitespace-nowrap">Mika Ninagawa Artist’s Book</p>
       <AnkerSection />
     </div>
   );
@@ -255,7 +255,7 @@ function Section() {
       <ParallaxPhoto src={imgPhoto03Sec01} speed={80} className="absolute h-[338px] left-[106px] top-[842px] w-[478px]" />
       <ParallaxPhoto src={imgPhoto02Sec01} speed={-110} className="absolute h-[339px] left-[698px] top-[985px] w-[478px]" />
       <ParallaxPhoto src={imgPhoto01Sec01} speed={100} className="absolute h-[339px] left-[378px] top-[1155px] w-[477px]" />
-      <div className="absolute font-['Hiragino_Mincho_Pro:W3',sans-serif] leading-[0] left-[59px] not-italic text-[20px] text-white top-[1142px] whitespace-nowrap">
+      <div className="absolute font-['Zen_Old_Mincho',serif] leading-[0] left-[59px] not-italic text-[20px] text-white top-[1142px] whitespace-nowrap">
         <motion.p {...fadeIn} className="leading-[24px] mb-0">破</motion.p>
         <motion.p {...fadeIn} className="leading-[24px] mb-0">壊</motion.p>
         <motion.p {...fadeIn} className="leading-[24px] mb-0">、</motion.p>
@@ -292,8 +292,8 @@ function Bg01Sec() {
 function MovieSec() {
   return (
     <>
-      <div className="absolute bg-black h-[351px] left-[347px] top-[1901px] w-[621px]" />
-      <div className="-translate-x-1/2 absolute h-[346px] left-[calc(50%+18px)] top-[1903px] w-[620px]">
+      <div className="absolute bg-black h-[351px] left-[347px] top-[2201px] w-[621px]" />
+      <div className="-translate-x-1/2 absolute h-[346px] left-[calc(50%+18px)] top-[2203px] w-[620px]">
         <img alt="" className="absolute inset-0 max-w-none object-cover opacity-25 pointer-events-none size-full" src={img202605062139591} />
       </div>
     </>
@@ -317,20 +317,20 @@ function Section1() {
         </div>
       </div>
       <MovieSec />
-      <motion.p {...fadeIn} className="absolute font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] h-[190px] leading-[19px] left-[calc(50%+269px)] not-italic text-[11px] text-justify text-white top-[2500px] w-[264px]">写真を中心として、映画、映像、空間インスタレーションも多く手掛ける。クリエイティブチーム「EiM（エイム）」の一員としても活動中。木村伊兵衛写真賞ほか数々受賞。2010年ニューヨークのRizzoliから写真集を出版。また、『ヘルタースケルター』（2012年）、『Diner ダイナー』（2019年）をはじめ長編映画を5作、Netflixオリジナルドラマ『FOLLOWERS』（2020年）を監督。これまでに写真集120冊以上を刊行、個展150回以上、グループ展130回以上と国内外で精力的に作品発表を続ける。</motion.p>
+      <motion.p {...fadeIn} className="absolute font-['Noto_Sans_JP',sans-serif] h-[190px] leading-[19px] left-[calc(50%+269px)] not-italic text-[11px] text-justify text-white top-[2500px] w-[264px]">写真を中心として、映画、映像、空間インスタレーションも多く手掛ける。クリエイティブチーム「EiM（エイム）」の一員としても活動中。木村伊兵衛写真賞ほか数々受賞。2010年ニューヨークのRizzoliから写真集を出版。また、『ヘルタースケルター』（2012年）、『Diner ダイナー』（2019年）をはじめ長編映画を5作、Netflixオリジナルドラマ『FOLLOWERS』（2020年）を監督。これまでに写真集120冊以上を刊行、個展150回以上、グループ展130回以上と国内外で精力的に作品発表を続ける。</motion.p>
       <div className="-translate-x-1/2 absolute flex h-[117px] items-center justify-center left-[calc(50%+257px)] top-[2320px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-90">
-          <p className="font-['Instrument_Serif:Regular',sans-serif] leading-[12px] not-italic relative text-[18px] text-center text-white tracking-[1.8px] whitespace-nowrap">Mika Ninagawa</p>
+          <p className="font-['Instrument_Serif',serif] leading-[12px] not-italic relative text-[18px] text-center text-white tracking-[1.8px] whitespace-nowrap">Mika Ninagawa</p>
         </div>
       </div>
-      <div className="-translate-x-1/2 absolute font-['Hiragino_Mincho_Pro:W3',sans-serif] leading-[0] left-[847px] not-italic text-[40px] text-center text-white top-[2350px] whitespace-nowrap">
+      <div className="-translate-x-1/2 absolute font-['Zen_Old_Mincho',serif] leading-[0] left-[847px] not-italic text-[40px] text-center text-white top-[2350px] whitespace-nowrap">
         <p className="leading-[48px] mb-0 whitespace-pre">蜷</p>
         <p className="leading-[48px] mb-0 whitespace-pre">川</p>
         <p className="leading-[48px] mb-0 whitespace-pre">​</p>
         <p className="leading-[48px] mb-0 whitespace-pre">実</p>
         <p className="leading-[48px] whitespace-pre">花</p>
       </div>
-      <p className="absolute font-['Hiragino_Mincho_Pro:W3',sans-serif] leading-[48px] left-[calc(50%-486px)] not-italic text-[23px] text-justify text-white top-[1791px] w-[987px]">
+      <p className="absolute font-['Zen_Old_Mincho',serif] leading-[48px] left-[calc(50%-486px)] not-italic text-[23px] text-justify text-white top-[1791px] w-[987px]">
         {[
           "30年近くキャリアを重ねていくなかで、映画やインスタレーション作品など大きなプロジェクトをやる機会も増えてきた。",
           "どれも新しい挑戦だし、いつだって熱を入れて作品をつくっているけれど、やっぱり写真が全てのスタート地点であり帰る場所。",
@@ -356,7 +356,7 @@ function Section1() {
       </p>
       <div className="absolute flex h-[68px] items-center justify-center left-[calc(50%-611px)] top-[1497px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-90">
-          <p className="font-['Instrument_Serif:Regular',sans-serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Comment</p>
+          <p className="font-['Instrument_Serif',serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Comment</p>
         </div>
       </div>
     </section>
@@ -393,7 +393,7 @@ function MovieSec1() {
 function TagSpecial() {
   return (
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
-      <p className="col-1 font-['Zen_Old_Mincho:Bold',sans-serif] leading-[17.059px] ml-[16.21px] mt-[5.12px] not-italic relative row-1 text-[17.059px] text-white tracking-[-0.6824px] whitespace-nowrap">特装版</p>
+      <p className="col-1 font-['Zen_Old_Mincho',serif] leading-[17.059px] ml-[16.21px] mt-[5.12px] not-italic relative row-1 text-[17.059px] text-white tracking-[-0.6824px] whitespace-nowrap">特装版</p>
       <div className="border-[0.426px] border-solid border-white col-1 h-[29px] ml-0 mt-0 relative row-1 w-[81.882px]" />
     </div>
   );
@@ -403,7 +403,7 @@ function ButtonOrder() {
   return (
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 cursor-pointer group">
       <div className="bg-white col-1 h-[44px] ml-0 mt-0 relative rounded-[5px] row-1 w-[139px] transition-colors duration-200 group-hover:bg-neutral-300" />
-      <p className="col-1 font-['Noto_Sans_CJK_JP:Regular',sans-serif] leading-[22px] ml-[31px] mt-[11px] not-italic relative row-1 text-[13px] text-black whitespace-nowrap pointer-events-none">予約注文する</p>
+      <p className="col-1 font-['Noto_Sans_JP',sans-serif] leading-[22px] ml-[31px] mt-[11px] not-italic relative row-1 text-[13px] text-black whitespace-nowrap pointer-events-none">予約注文する</p>
     </div>
   );
 }
@@ -412,14 +412,14 @@ function LeftColumn() {
   return (
     <div className="content-stretch flex flex-col gap-[29px] items-start relative shrink-0 w-[453px]">
       <TagSpecial />
-      <motion.p {...fadeIn} className="font-['Hiragino_Mincho_Pro:W3',sans-serif] leading-[48px] min-w-full not-italic relative shrink-0 text-[40px] text-white w-[min-content]">mirror, mirror, mirror mika ninagawa</motion.p>
-      <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] leading-[0] min-w-full not-italic relative shrink-0 text-[0px] text-white tracking-[0.96px] w-[min-content]">
-        <span className="font-['Noto_Sans_CJK_JP:Light',sans-serif] leading-[32px] text-[32px]">¥820,000</span>
+      <motion.p {...fadeIn} className="font-['Zen_Old_Mincho',serif] leading-[48px] min-w-full not-italic relative shrink-0 text-[40px] text-white w-[min-content]">mirror, mirror, mirror mika ninagawa</motion.p>
+      <motion.p {...fadeIn} className="font-['Noto_Sans_JP',sans-serif] leading-[0] min-w-full not-italic relative shrink-0 text-[0px] text-white tracking-[0.96px] w-[min-content]">
+        <span className="font-['Noto_Sans_JP',sans-serif] leading-[32px] text-[32px]">¥820,000</span>
         <span className="leading-[32px] text-[32px]">{` `}</span>
         <span className="leading-[32px] text-[16px]">(税込)</span>
       </motion.p>
       <ButtonOrder />
-      <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] leading-[16px] min-w-full not-italic relative shrink-0 text-[10px] text-white w-[min-content]">発送予定：ご注文いただいてから、6ヶ月後から順次発送</motion.p>
+      <motion.p {...fadeIn} className="font-['Noto_Sans_JP',sans-serif] leading-[16px] min-w-full not-italic relative shrink-0 text-[10px] text-white w-[min-content]">発送予定：ご注文いただいてから、6ヶ月後から順次発送</motion.p>
     </div>
   );
 }
@@ -427,9 +427,9 @@ function LeftColumn() {
 function RightColumn() {
   return (
     <div className="content-stretch flex flex-col gap-[34px] items-start not-italic relative shrink-0 text-white w-[466px]">
-      <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] h-[132px] leading-[22px] relative shrink-0 text-[13px] text-justify w-full">祭壇をイメージした、小型のアクリル製キャビネットの中にアーティストブックを収納した特装版を限定リリースします。キャビネットの内には、今回刊行される書籍をは​じめ、蜷川がセレクトした追悼や記憶にまつわるアイテムが収められます。日常の​空間に置かれるひとつの私的な祭壇として、記憶と現在、生と死のあいだに静かな​回路をひらくオブジェクトです。</motion.p>
-      <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:Medium',sans-serif] leading-[22px] relative shrink-0 text-[14px] w-full">商品詳細</motion.p>
-      <div className="font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] h-[325px] leading-[0] relative shrink-0 text-[13px] text-justify w-full">
+      <motion.p {...fadeIn} className="font-['Noto_Sans_JP',sans-serif] h-[132px] leading-[22px] relative shrink-0 text-[13px] text-justify w-full">祭壇をイメージした、小型のアクリル製キャビネットの中にアーティストブックを収納した特装版を限定リリースします。キャビネットの内には、今回刊行される書籍をは​じめ、蜷川がセレクトした追悼や記憶にまつわるアイテムが収められます。日常の​空間に置かれるひとつの私的な祭壇として、記憶と現在、生と死のあいだに静かな​回路をひらくオブジェクトです。</motion.p>
+      <motion.p {...fadeIn} className="font-['Noto_Sans_JP',sans-serif] leading-[22px] relative shrink-0 text-[14px] w-full">商品詳細</motion.p>
+      <div className="font-['Noto_Sans_JP',sans-serif] h-[325px] leading-[0] relative shrink-0 text-[13px] text-justify w-full">
         <motion.p {...fadeIn} className="leading-[25px] mb-0">受注締切：第一期 7月30日</motion.p>
         <motion.p {...fadeIn} className="leading-[25px] mb-0">販売数：限定30作品</motion.p>
         <motion.p {...fadeIn} className="leading-[25px] mb-0">著者:蜷川実花</motion.p>
@@ -443,7 +443,7 @@ function RightColumn() {
         <motion.p {...fadeIn} className="leading-[25px] mb-0">出版：光村推古書院株式会社</motion.p>
         <motion.p {...fadeIn} className="leading-[25px]">企画：CCC ART LAB, 株式会社テレビ朝日, 株式会社ラッキースター, afumi inc.</motion.p>
       </div>
-      <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:Light',sans-serif] leading-[16px] relative shrink-0 text-[10px] w-full">© Culture Convenience Club Co.,Ltd</motion.p>
+      <motion.p {...fadeIn} className="font-['Noto_Sans_JP',sans-serif] leading-[16px] relative shrink-0 text-[10px] w-full">© Culture Convenience Club Co.,Ltd</motion.p>
     </div>
   );
 }
@@ -464,7 +464,7 @@ function Frame1() {
       <Frame />
       <div className="-translate-x-1/2 absolute flex h-[89px] items-center justify-center left-[calc(50%+614px)] top-[34px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-90">
-          <p className="font-['Instrument_Serif:Regular',sans-serif] h-[12px] leading-[12px] not-italic relative text-[18px] text-black text-center tracking-[1.08px] whitespace-nowrap">Artist’s Book</p>
+          <p className="font-['Instrument_Serif',serif] h-[12px] leading-[12px] not-italic relative text-[18px] text-black text-center tracking-[1.08px] whitespace-nowrap">Artist’s Book</p>
         </div>
       </div>
     </div>
@@ -480,44 +480,33 @@ function Section2() {
   );
 }
 
-function Img01Sec() {
+function ProductCard({ src, imgWidth, imgHeight, offsetX, offsetY }: { src: string; imgWidth: number; imgHeight: number; offsetX: number; offsetY: number }) {
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
-      <div className="col-1 h-[422.868px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[161.703px_1.948px] mask-size-[311.716px_418.868px] ml-[-161.7px] mt-[-1.95px] relative row-1 w-[633.992px]" style={{ maskImage: `url('${img80A06631}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img80A6632} />
-      </div>
+    <div className="overflow-hidden relative shrink-0 w-[311.716px] h-[418.868px]">
+      <img
+        alt=""
+        className="absolute max-w-none pointer-events-none object-cover"
+        style={{ width: imgWidth, height: imgHeight, left: offsetX, top: offsetY }}
+        src={src}
+      />
     </div>
   );
+}
+
+function Img01Sec() {
+  return <ProductCard src={img80A6632} imgWidth={633.992} imgHeight={422.868} offsetX={-161.703} offsetY={-1.948} />;
 }
 
 function Img02Sec() {
-  return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
-      <div className="col-1 h-[454.713px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_26.301px] mask-size-[311.716px_418.868px] ml-0 mt-[-26.3px] relative row-1 w-[341.088px]" style={{ maskImage: `url('${img80A06631}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgS1600X2133VFrmsWebpFf594319Bdc3406D8B06E5Ee25F80E0FWebp1} />
-      </div>
-    </div>
-  );
+  return <ProductCard src={imgS1600X2133VFrmsWebpFf594319Bdc3406D8B06E5Ee25F80E0FWebp1} imgWidth={341.088} imgHeight={454.713} offsetX={0} offsetY={-26.301} />;
 }
 
 function Img03Sec() {
-  return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
-      <div className="col-1 h-[428.576px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_9.741px] mask-size-[311.716px_418.868px] ml-0 mt-[-9.74px] relative row-1 w-[321.482px]" style={{ maskImage: `url('${img80A06631}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgS1600X2133VFrmsWebp272D6FecEd0D4F3591D3Dbab1025219DWebp1} />
-      </div>
-    </div>
-  );
+  return <ProductCard src={imgS1600X2133VFrmsWebp272D6FecEd0D4F3591D3Dbab1025219DWebp1} imgWidth={321.482} imgHeight={428.576} offsetX={0} offsetY={-9.741} />;
 }
 
 function Img04Sec() {
-  return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
-      <div className="col-1 h-[427.44px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[9.741px_0px] mask-size-[311.716px_418.868px] ml-[-9.74px] mt-0 relative row-1 w-[320.63px]" style={{ maskImage: `url('${img80A06631}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgS1600X2133VFrmsWebp59C9Cca8143A4D9E987086C7B74CdcdeWebp1} />
-      </div>
-    </div>
-  );
+  return <ProductCard src={imgS1600X2133VFrmsWebp59C9Cca8143A4D9E987086C7B74CdcdeWebp1} imgWidth={320.63} imgHeight={427.44} offsetX={-9.741} offsetY={0} />;
 }
 
 function Frame2() {
@@ -533,10 +522,10 @@ function Frame2() {
 
 function Frame3() {
   return (
-    <div className="absolute content-stretch flex gap-[93px] items-start left-[24px] top-[4324px]">
+    <div className="absolute content-stretch flex gap-[93px] items-start left-[24px] top-[4524px]">
       <div className="flex h-[102px] items-center justify-center relative shrink-0 w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-90">
-          <p className="font-['Instrument_Serif:Regular',sans-serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Product Detail</p>
+          <p className="font-['Instrument_Serif',serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Product Detail</p>
         </div>
       </div>
       <Frame2 />
@@ -547,7 +536,7 @@ function Frame3() {
 function Section3() {
   return (
     <section>
-      <div className="absolute flex h-[368px] items-center justify-center left-[-243px] top-[3987px] w-[903px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+      <div className="absolute flex h-[368px] items-center justify-center left-[-243px] top-[4187px] w-[903px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-[22.17deg]">
           <div className="h-0 relative w-[975.107px]">
             <div className="absolute inset-[-0.5px_0_0_0]">
@@ -565,7 +554,7 @@ function Section3() {
 
 function BgSec2() {
   return (
-    <div className="absolute left-0 top-[4743px] w-[1280px] h-[875px]">
+    <div className="absolute left-0 top-[4943px] w-[1280px] h-[875px]">
       <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBgSec05} />
     </div>
   );
@@ -575,7 +564,7 @@ function ButtonDetail() {
   return (
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 cursor-pointer group">
       <div className="border-[0.5px] border-solid border-white col-1 h-[44px] ml-0 mt-0 relative rounded-[5px] row-1 w-[139px] transition-colors duration-200 group-hover:bg-white/15" />
-      <p className="col-1 font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] leading-[22px] ml-[30px] mt-[11px] not-italic relative row-1 text-[13px] text-white whitespace-nowrap pointer-events-none">詳細はこちら</p>
+      <p className="col-1 font-['Noto_Sans_JP',sans-serif] leading-[22px] ml-[30px] mt-[11px] not-italic relative row-1 text-[13px] text-white whitespace-nowrap pointer-events-none">詳細はこちら</p>
     </div>
   );
 }
@@ -583,11 +572,11 @@ function ButtonDetail() {
 function Frame4() {
   return (
     <div className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-[485px]">
-      <div className="font-['Hiragino_Mincho_Pro:W3',sans-serif] leading-[0] not-italic relative shrink-0 text-[36px] text-white w-[475px]">
+      <div className="font-['Zen_Old_Mincho',serif] leading-[0] not-italic relative shrink-0 text-[36px] text-white w-[475px]">
         <motion.p {...fadeIn} className="leading-[49px] mb-0">mirror, mirror, mirror</motion.p>
         <motion.p {...fadeIn} className="leading-[49px]">mika ninagawa 展</motion.p>
       </div>
-      <motion.p {...fadeIn} className="font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] h-[124px] leading-[25px] min-w-full not-italic relative shrink-0 text-[14px] text-white w-[min-content]">蜷川実花が、10数年にわたり活動の拠点としてきた下北沢の地において、アーティストブックの刊行を記念した展覧会を開催します。本展は、アーティストブックに結実した表現の軌跡を、展示空間の中であらためて構成する試みです。「破壊、再生、また破壊」という創作テーマのもと、蜷川の表現史と現在の表現が、ひとつの空間として提示されます​。</motion.p>
+      <motion.p {...fadeIn} className="font-['Noto_Sans_JP',sans-serif] h-[124px] leading-[25px] min-w-full not-italic relative shrink-0 text-[14px] text-white w-[min-content]">蜷川実花が、10数年にわたり活動の拠点としてきた下北沢の地において、アーティストブックの刊行を記念した展覧会を開催します。本展は、アーティストブックに結実した表現の軌跡を、展示空間の中であらためて構成する試みです。「破壊、再生、また破壊」という創作テーマのもと、蜷川の表現史と現在の表現が、ひとつの空間として提示されます​。</motion.p>
       <ButtonDetail />
     </div>
   );
@@ -595,7 +584,7 @@ function Frame4() {
 
 function Frame5() {
   return (
-    <div className="absolute content-stretch flex gap-[71px] items-center left-0 top-[4975px]">
+    <div className="absolute content-stretch flex gap-[71px] items-center left-0 top-[5175px]">
       <div className="h-[429px] relative shrink-0 w-[642px]">
         <img alt="" className="absolute inset-0 max-w-none object-cover opacity-90 pointer-events-none size-full" src={imgImgSec05} />
       </div>
@@ -609,9 +598,9 @@ function Section4() {
     <section>
       <BgSec2 />
       <Frame5 />
-      <div className="absolute flex h-[74px] items-center justify-center left-[calc(50%+601px)] top-[4893px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+      <div className="absolute flex h-[74px] items-center justify-center left-[calc(50%+601px)] top-[5093px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-90">
-          <p className="font-['Instrument_Serif:Regular',sans-serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Exhibition</p>
+          <p className="font-['Instrument_Serif',serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Exhibition</p>
         </div>
       </div>
     </section>
@@ -633,8 +622,8 @@ function Footer() {
           </g>
         </svg>
       </div>
-      <motion.p {...fadeIn} className="absolute font-['Roboto:Light',sans-serif] font-light leading-[16px] left-[138px] text-[11px] text-white top-[5582px] whitespace-pre" style={{ fontVariationSettings: "'wdth' 100" }}>{`©  2026 DIPSY Inc. All rights reserved.`}</motion.p>
-      <motion.p {...fadeIn} className="absolute font-['Noto_Sans_CJK_JP:DemiLight',sans-serif] leading-[16px] left-[30px] not-italic text-[12px] text-white top-[5582px] whitespace-pre">{`利用規約　　｜　　`}</motion.p>
+      <motion.p {...fadeIn} className="absolute font-['Instrument_Serif',serif] font-light leading-[16px] left-[138px] text-[11px] text-white top-[5782px] whitespace-pre" style={{ fontVariationSettings: "'wdth' 100" }}>{`©  2026 DIPSY Inc. All rights reserved.`}</motion.p>
+      <motion.p {...fadeIn} className="absolute font-['Noto_Sans_JP',sans-serif] leading-[16px] left-[30px] not-italic text-[12px] text-white top-[5782px] whitespace-pre">{`利用規約　　｜　　`}</motion.p>
     </footer>
   );
 }
