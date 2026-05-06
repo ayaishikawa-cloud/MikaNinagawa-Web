@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Component01IndexPcO from "../imports/01IndexPcO/01IndexPcO";
 
 const DESIGN_WIDTH = 1280;
-const DESIGN_HEIGHT = 5620;
+const DESIGN_HEIGHT = 5820;
 
 export default function App() {
   const [scale, setScale] = useState(1);
