@@ -1,1 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Sans+JP:wght@100..900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Sans+JP:wght@100..900&family=Roboto:wght@300&display=swap');
+
+/* Override the global !font-extralight (200) on Mincho elements so the
+   Hiragino Mincho Pro renders thinner. Higher specificity than the
+   Tailwind utility (element + attribute selector beats class+universal). */
+p[class*="Hiragino_Mincho_Pro"],
+div[class*="Hiragino_Mincho_Pro"] {
+  font-weight: 100 !important;
+}

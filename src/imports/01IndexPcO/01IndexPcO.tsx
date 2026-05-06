@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import HeroScrollAnimation from "./HeroScrollAnimation";
 
 const fadeIn = {
   initial: { opacity: 0, y: 16 },
@@ -19,10 +20,7 @@ import imgPhoto04Sec01 from "./b2c977e6cfcda7545fa3e1488073edcad7fab7a9.png";
 import imgPhoto03Sec01 from "./a45ae21d2ca1ab4f44409f1cc1a37df86494e66c.png";
 import imgPhoto02Sec01 from "./b401b651683b492c8d3c6b621705dafe1fe08c98.png";
 import imgPhoto01Sec01 from "./798856b17fea137fe816f56fb4d79fa710b2d472.png";
-import imgRectangle11 from "./307552f834a5f98718e931306e95c31913670b42.png";
-import img202605062139591 from "./a8ab8a566586d2ed96a768b9300b91c563907737.png";
 import imgRectangle12 from "./98cd64c15bbe778d328ed75265e81d0cbe91b881.png";
-import imgBox23 from "./862a701c18b73d42038a224aac3afbe7f78791e0.png";
 import img80A6632 from "./85a92643cfc8ea2127cb6553bae8279a76d47044.png";
 import imgS1600X2133VFrmsWebpFf594319Bdc3406D8B06E5Ee25F80E0FWebp1 from "./9fcb13bc64cd31fd8b75bb0e064a6ea536fcb195.png";
 import imgS1600X2133VFrmsWebp272D6FecEd0D4F3591D3Dbab1025219DWebp1 from "./dd347c12beb48f5b69e5fcddf4baa037e70a4a8e.png";
@@ -30,12 +28,23 @@ import imgS1600X2133VFrmsWebp59C9Cca8143A4D9E987086C7B74CdcdeWebp1 from "./488a9
 import imgRectangle13 from "./5317d1625578a70e60886f852db5623e81fc5541.png";
 import imgImgSec05 from "./1d9b0dde9104012a5cd940cb30c770ee5aa53b58.png";
 import imgBgSec05 from "../bg_sec05.png";
+import heroScrollVideo from "./hero-scroll.mp4";
+import movieSec02Video from "./movie_sec02.mp4";
+import box3dVideo from "./box_3d.mp4";
 import { img80A06841, img141216041936900X12001, imgBox022 } from "./svg-n94c3";
 
 function MovieHero() {
   return (
-    <div className="-translate-x-1/2 absolute h-[854px] left-1/2 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0px] mask-size-[1280px_720px] opacity-90 top-0 w-[1280px]" style={{ maskImage: `url('${img80A06841}')` }}>
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img80A6842} />
+    <div data-hero="bg" className="-translate-x-1/2 absolute h-[854px] left-1/2 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0px] mask-size-[1280px_720px] opacity-90 top-0 w-[1280px]" style={{ maskImage: `url('${img80A06841}')` }}>
+      <video
+        data-hero-video
+        src={heroScrollVideo}
+        poster={img80A6842}
+        muted
+        playsInline
+        preload="auto"
+        className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+      />
     </div>
   );
 }
@@ -59,9 +68,13 @@ function Floating() {
 }
 
 function Hero() {
+  const heroRef = useRef<HTMLElement>(null);
   return (
-    <section>
-      <MovieHero />
+    <section ref={heroRef} style={{ height: 1750 }}>
+      <HeroScrollAnimation containerRef={heroRef} />
+      <div data-hero-follow className="absolute top-0 left-0 w-full" style={{ height: 854, willChange: "transform" }}>
+        <MovieHero />
+      </div>
       <Floating />
       <div className="absolute h-[156px] left-[1121px] top-[204px] w-[54px]">
         <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 54 156">
@@ -136,11 +149,11 @@ function Hero() {
           </div>
         </div>
       </div>
-      <motion.div initial={{ clipPath: "inset(0 100% 0 0)" }} animate={{ clipPath: "inset(0 0% 0 0)" }} transition={{ duration: 1, ease: "easeOut", delay: 0.1 }} className="absolute flex inset-[1.18%_-3.68%_91.93%_37.42%] items-center justify-center" style={{ containerType: "size" }}>
-        <div className="-rotate-15 flex-none h-[hypot(5.5846cqw,45.1707cqh)] w-[hypot(94.4154cqw,-54.8293cqh)]">
+      <motion.div initial={{ clipPath: "inset(0 100% 0 0)" }} animate={{ clipPath: "inset(0 0% 0 0)" }} transition={{ duration: 1, ease: "easeOut", delay: 0.1 }} className="absolute flex inset-[-0.7%_-8%_92.2%_30%] items-center justify-center" style={{ containerType: "size" }}>
+        <div className="-rotate-15 scale-[0.7] flex-none h-[hypot(5.5846cqw,45.1707cqh)] w-[hypot(94.4154cqw,-54.8293cqh)]">
           <div className="relative size-full">
             <div className="absolute inset-[-27.32%_-6.03%]">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 929 283">
+              <svg className="block size-full" fill="none" preserveAspectRatio="xMidYMid meet" viewBox="0 0 929 283">
                 <g filter="url(#filter0_d_1_144)" id="title">
                   <path d={svgPaths.p32564580} fill="var(--fill-0, white)" />
                   <path d={svgPaths.p2c0afb00} fill="var(--fill-0, white)" />
@@ -204,7 +217,7 @@ function Hero() {
 
 function Movie() {
   return (
-    <div className="absolute left-0 top-[720px] w-[1280px] h-[853px]">
+    <div className="absolute left-0 top-[1750px] w-[1280px] h-[853px]">
       <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img110191118Vca598652800X12003} />
     </div>
   );
@@ -226,7 +239,7 @@ function BgSec() {
   return (
     <>
       <Movie />
-      <div className="absolute h-[853px] left-0 top-[720px] w-[1281px]">
+      <div className="absolute h-[853px] left-0 top-[1750px] w-[1281px]">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgPaint002} />
       </div>
     </>
@@ -248,14 +261,14 @@ function Section() {
   return (
     <section>
       <BgSec />
-      <ParallaxPhoto src={imgPhoto07Sec01} speed={120} className="absolute h-[222px] left-[777px] top-[1208px] w-[332.25px]" />
-      <ParallaxPhoto src={imgPhoto06Sec01} speed={-90} className="absolute h-[386.25px] left-[-29px] top-[885px] w-[515.25px]" />
-      <ParallaxPhoto src={imgPhoto05Sec01} speed={150} className="absolute h-[288px] left-[153px] top-[1100px] w-[431.25px]" />
-      <ParallaxPhoto src={imgPhoto04Sec01} speed={-140} className="absolute h-[219px] left-[982px] top-[842px] w-[330px]" />
-      <ParallaxPhoto src={imgPhoto03Sec01} speed={80} className="absolute h-[338px] left-[106px] top-[842px] w-[478px]" />
-      <ParallaxPhoto src={imgPhoto02Sec01} speed={-110} className="absolute h-[339px] left-[698px] top-[985px] w-[478px]" />
-      <ParallaxPhoto src={imgPhoto01Sec01} speed={100} className="absolute h-[339px] left-[378px] top-[1155px] w-[477px]" />
-      <div className="absolute font-['Zen_Old_Mincho',serif] leading-[0] left-[59px] not-italic text-[20px] text-white top-[1142px] whitespace-nowrap">
+      <ParallaxPhoto src={imgPhoto07Sec01} speed={220} className="absolute h-[222px] left-[777px] top-[2238px] w-[332.25px]" />
+      <ParallaxPhoto src={imgPhoto06Sec01} speed={-190} className="absolute h-[386.25px] left-[-29px] top-[1915px] w-[515.25px]" />
+      <ParallaxPhoto src={imgPhoto05Sec01} speed={250} className="absolute h-[288px] left-[153px] top-[2130px] w-[431.25px]" />
+      <ParallaxPhoto src={imgPhoto04Sec01} speed={-240} className="absolute h-[219px] left-[982px] top-[1872px] w-[330px]" />
+      <ParallaxPhoto src={imgPhoto03Sec01} speed={180} className="absolute h-[338px] left-[106px] top-[1872px] w-[478px]" />
+      <ParallaxPhoto src={imgPhoto02Sec01} speed={-210} className="absolute h-[339px] left-[698px] top-[2015px] w-[478px]" />
+      <ParallaxPhoto src={imgPhoto01Sec01} speed={200} className="absolute h-[339px] left-[378px] top-[2185px] w-[477px]" />
+      <div className="absolute font-['Hiragino_Mincho_Pro',serif] leading-[0] left-[59px] not-italic text-[20px] text-white top-[2172px] whitespace-nowrap">
         <motion.p {...fadeIn} className="leading-[24px] mb-0">破</motion.p>
         <motion.p {...fadeIn} className="leading-[24px] mb-0">壊</motion.p>
         <motion.p {...fadeIn} className="leading-[24px] mb-0">、</motion.p>
@@ -269,32 +282,12 @@ function Section() {
   );
 }
 
-function Bg02Sec() {
-  return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[780.976px] items-center justify-center left-[calc(50%+447.3px)] top-[calc(50%-123.88px)] w-[675.92px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "0" } as React.CSSProperties}>
-      <div className="flex-none rotate-90">
-        <div className="bg-[#1d1d1d] h-[675.92px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[82.656px_-4.635px] mask-size-[587.857px_988px] relative w-[780.976px]" style={{ maskImage: `url('${imgRectangle11}')` }} />
-      </div>
-    </div>
-  );
-}
-
-function Bg01Sec() {
-  return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[780.976px] items-center justify-center left-[calc(50%-318.45px)] top-[calc(50%-887.12px)] w-[675.92px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "0" } as React.CSSProperties}>
-      <div className="-rotate-90 flex-none">
-        <div className="bg-[#1d1d1d] h-[675.92px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[5.407px_-202.389px] mask-size-[587.857px_988px] relative w-[780.976px]" style={{ maskImage: `url('${imgRectangle11}')` }} />
-      </div>
-    </div>
-  );
-}
-
 function MovieSec() {
   return (
     <>
-      <div className="absolute bg-black h-[351px] left-[347px] top-[2201px] w-[621px]" />
-      <div className="-translate-x-1/2 absolute h-[346px] left-[calc(50%+18px)] top-[2203px] w-[620px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover opacity-25 pointer-events-none size-full" src={img202605062139591} />
+      <div className="absolute bg-black h-[351px] left-[347px] top-[3231px] w-[621px]" />
+      <div className="-translate-x-1/2 absolute h-[346px] left-[calc(50%+18px)] top-[3233px] w-[620px]">
+        <video src={movieSec02Video} autoPlay muted loop playsInline className="absolute inset-0 max-w-none object-cover opacity-25 pointer-events-none size-full" />
       </div>
     </>
   );
@@ -303,9 +296,7 @@ function MovieSec() {
 function Section1() {
   return (
     <section>
-      <Bg02Sec />
-      <Bg01Sec />
-      <div className="absolute flex h-[354.581px] items-center justify-center left-[532px] top-[1716.01px] w-[908.353px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+      <div className="absolute flex h-[354.581px] items-center justify-center left-[532px] top-[2746.01px] w-[908.353px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-[-21.32deg]">
           <div className="h-0 relative w-[975.107px]">
             <div className="absolute inset-[-0.5px_0_0_0]">
@@ -317,20 +308,20 @@ function Section1() {
         </div>
       </div>
       <MovieSec />
-      <motion.p {...fadeIn} className="absolute font-['Noto_Sans_JP',sans-serif] h-[190px] leading-[19px] left-[calc(50%+269px)] not-italic text-[11px] text-justify text-white top-[2500px] w-[264px]">写真を中心として、映画、映像、空間インスタレーションも多く手掛ける。クリエイティブチーム「EiM（エイム）」の一員としても活動中。木村伊兵衛写真賞ほか数々受賞。2010年ニューヨークのRizzoliから写真集を出版。また、『ヘルタースケルター』（2012年）、『Diner ダイナー』（2019年）をはじめ長編映画を5作、Netflixオリジナルドラマ『FOLLOWERS』（2020年）を監督。これまでに写真集120冊以上を刊行、個展150回以上、グループ展130回以上と国内外で精力的に作品発表を続ける。</motion.p>
-      <div className="-translate-x-1/2 absolute flex h-[117px] items-center justify-center left-[calc(50%+257px)] top-[2320px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+      <motion.p {...fadeIn} className="absolute font-['Noto_Sans_JP',sans-serif] h-[190px] leading-[19px] left-[calc(50%+269px)] not-italic text-[11px] text-justify text-white top-[3680px] w-[264px]">写真を中心として、映画、映像、空間インスタレーションも多く手掛ける。クリエイティブチーム「EiM（エイム）」の一員としても活動中。木村伊兵衛写真賞ほか数々受賞。2010年ニューヨークのRizzoliから写真集を出版。また、『ヘルタースケルター』（2012年）、『Diner ダイナー』（2019年）をはじめ長編映画を5作、Netflixオリジナルドラマ『FOLLOWERS』（2020年）を監督。これまでに写真集120冊以上を刊行、個展150回以上、グループ展130回以上と国内外で精力的に作品発表を続ける。</motion.p>
+      <div className="-translate-x-1/2 absolute flex h-[117px] items-center justify-center left-[calc(50%+257px)] top-[3500px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-90">
           <p className="font-['Instrument_Serif',serif] leading-[12px] not-italic relative text-[18px] text-center text-white tracking-[1.8px] whitespace-nowrap">Mika Ninagawa</p>
         </div>
       </div>
-      <div className="-translate-x-1/2 absolute font-['Zen_Old_Mincho',serif] leading-[0] left-[847px] not-italic text-[40px] text-center text-white top-[2350px] whitespace-nowrap">
+      <div className="-translate-x-1/2 absolute font-['Hiragino_Mincho_Pro',serif] leading-[0] left-[847px] not-italic text-[40px] text-center text-white top-[3530px] whitespace-nowrap">
         <p className="leading-[48px] mb-0 whitespace-pre">蜷</p>
         <p className="leading-[48px] mb-0 whitespace-pre">川</p>
         <p className="leading-[48px] mb-0 whitespace-pre">​</p>
         <p className="leading-[48px] mb-0 whitespace-pre">実</p>
         <p className="leading-[48px] whitespace-pre">花</p>
       </div>
-      <p className="absolute font-['Zen_Old_Mincho',serif] leading-[48px] left-[calc(50%-486px)] not-italic text-[23px] text-justify text-white top-[1791px] w-[987px]">
+      <p className="absolute font-['Hiragino_Mincho_Pro',serif] leading-[48px] left-[calc(50%-486px)] not-italic text-[23px] text-justify text-white top-[2821px] w-[987px]">
         {[
           "30年近くキャリアを重ねていくなかで、映画やインスタレーション作品など大きなプロジェクトをやる機会も増えてきた。",
           "どれも新しい挑戦だし、いつだって熱を入れて作品をつくっているけれど、やっぱり写真が全てのスタート地点であり帰る場所。",
@@ -354,7 +345,7 @@ function Section1() {
           </motion.span>
         ))}
       </p>
-      <div className="absolute flex h-[68px] items-center justify-center left-[calc(50%-611px)] top-[1497px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+      <div className="absolute flex h-[68px] items-center justify-center left-[calc(50%-611px)] top-[2677px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-90">
           <p className="font-['Instrument_Serif',serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Comment</p>
         </div>
@@ -373,10 +364,10 @@ function MaskGroup1() {
   return (
     <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-0 place-items-start relative row-1">
       <div className="col-1 h-[720px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[1px_50px] mask-size-[1280px_620px] ml-[-1px] mt-[-50px] relative row-1 w-[1282px]" style={{ maskImage: `url('${imgBox022}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBox23} />
+        <video src={box3dVideo} autoPlay muted loop playsInline className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" />
       </div>
       <div className="col-1 h-[596px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-109px_-12px] mask-size-[1280px_620px] ml-[109px] mt-[12px] relative row-1 w-[1062px]" style={{ maskImage: `url('${imgBox022}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBox23} />
+        <video src={box3dVideo} autoPlay muted loop playsInline className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" />
       </div>
     </div>
   );
@@ -393,7 +384,7 @@ function MovieSec1() {
 function TagSpecial() {
   return (
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
-      <p className="col-1 font-['Zen_Old_Mincho',serif] leading-[17.059px] ml-[16.21px] mt-[5.12px] not-italic relative row-1 text-[17.059px] text-white tracking-[-0.6824px] whitespace-nowrap">特装版</p>
+      <p className="col-1 font-['Hiragino_Mincho_Pro',serif] leading-[17.059px] ml-[16.21px] mt-[5.12px] not-italic relative row-1 text-[17.059px] text-white tracking-[-0.6824px] whitespace-nowrap">特装版</p>
       <div className="border-[0.426px] border-solid border-white col-1 h-[29px] ml-0 mt-0 relative row-1 w-[81.882px]" />
     </div>
   );
@@ -412,7 +403,7 @@ function LeftColumn() {
   return (
     <div className="content-stretch flex flex-col gap-[29px] items-start relative shrink-0 w-[453px]">
       <TagSpecial />
-      <motion.p {...fadeIn} className="font-['Zen_Old_Mincho',serif] leading-[48px] min-w-full not-italic relative shrink-0 text-[40px] text-white w-[min-content]">mirror, mirror, mirror mika ninagawa</motion.p>
+      <motion.p {...fadeIn} className="font-['Hiragino_Mincho_Pro',serif] leading-[48px] min-w-full not-italic relative shrink-0 text-[40px] text-white w-[min-content]">mirror, mirror, mirror mika ninagawa</motion.p>
       <motion.p {...fadeIn} className="font-['Noto_Sans_JP',sans-serif] leading-[0] min-w-full not-italic relative shrink-0 text-[0px] text-white tracking-[0.96px] w-[min-content]">
         <span className="font-['Noto_Sans_JP',sans-serif] leading-[32px] text-[32px]">¥820,000</span>
         <span className="leading-[32px] text-[32px]">{` `}</span>
@@ -459,7 +450,7 @@ function Frame() {
 
 function Frame1() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[94px] items-center left-[3px] top-[2868px] w-[1280px]">
+    <div className="absolute content-stretch flex flex-col gap-[94px] items-center left-[3px] top-[4098px] w-[1280px]">
       <MovieSec1 />
       <Frame />
       <div className="-translate-x-1/2 absolute flex h-[89px] items-center justify-center left-[calc(50%+614px)] top-[34px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
@@ -510,19 +501,22 @@ function Img04Sec() {
 }
 
 function Frame2() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const x = useTransform(scrollYProgress, [0, 1], [400, -400]);
   return (
-    <div className="content-stretch flex gap-[24px] items-center leading-[0] relative shrink-0">
+    <motion.div ref={ref} style={{ x }} className="content-stretch flex gap-[24px] items-center leading-[0] relative shrink-0">
       <Img01Sec />
       <Img02Sec />
       <Img03Sec />
       <Img04Sec />
-    </div>
+    </motion.div>
   );
 }
 
 function Frame3() {
   return (
-    <div className="absolute content-stretch flex gap-[93px] items-start left-[24px] top-[4524px]">
+    <div className="absolute content-stretch flex gap-[93px] items-start left-[24px] top-[5754px]">
       <div className="flex h-[102px] items-center justify-center relative shrink-0 w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-90">
           <p className="font-['Instrument_Serif',serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Product Detail</p>
@@ -536,7 +530,7 @@ function Frame3() {
 function Section3() {
   return (
     <section>
-      <div className="absolute flex h-[368px] items-center justify-center left-[-243px] top-[4187px] w-[903px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+      <div className="absolute flex h-[368px] items-center justify-center left-[-243px] top-[5417px] w-[903px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-[22.17deg]">
           <div className="h-0 relative w-[975.107px]">
             <div className="absolute inset-[-0.5px_0_0_0]">
@@ -554,7 +548,7 @@ function Section3() {
 
 function BgSec2() {
   return (
-    <div className="absolute left-0 top-[4943px] w-[1280px] h-[875px]">
+    <div className="absolute left-0 top-[6173px] w-[1280px] h-[875px]">
       <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBgSec05} />
     </div>
   );
@@ -572,7 +566,7 @@ function ButtonDetail() {
 function Frame4() {
   return (
     <div className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-[485px]">
-      <div className="font-['Zen_Old_Mincho',serif] leading-[0] not-italic relative shrink-0 text-[36px] text-white w-[475px]">
+      <div className="font-['Hiragino_Mincho_Pro',serif] leading-[0] not-italic relative shrink-0 text-[36px] text-white w-[475px]">
         <motion.p {...fadeIn} className="leading-[49px] mb-0">mirror, mirror, mirror</motion.p>
         <motion.p {...fadeIn} className="leading-[49px]">mika ninagawa 展</motion.p>
       </div>
@@ -584,7 +578,7 @@ function Frame4() {
 
 function Frame5() {
   return (
-    <div className="absolute content-stretch flex gap-[71px] items-center left-0 top-[5175px]">
+    <div className="absolute content-stretch flex gap-[71px] items-center left-0 top-[6405px]">
       <div className="h-[429px] relative shrink-0 w-[642px]">
         <img alt="" className="absolute inset-0 max-w-none object-cover opacity-90 pointer-events-none size-full" src={imgImgSec05} />
       </div>
@@ -598,7 +592,7 @@ function Section4() {
     <section>
       <BgSec2 />
       <Frame5 />
-      <div className="absolute flex h-[74px] items-center justify-center left-[calc(50%+601px)] top-[5093px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+      <div className="absolute flex h-[74px] items-center justify-center left-[calc(50%+601px)] top-[6323px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-90">
           <p className="font-['Instrument_Serif',serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Exhibition</p>
         </div>
@@ -610,8 +604,8 @@ function Section4() {
 function Footer() {
   return (
     <footer>
-      <div className="-translate-x-1/2 absolute bottom-[1.41%] left-[calc(50%+545.5px)] top-[98.19%] w-[123px]">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 123 23">
+      <div className="-translate-x-1/2 absolute left-[calc(50%+545.5px)] top-[7012px] w-[123px] h-[16px] flex items-center">
+        <svg className="block w-full h-auto" fill="none" viewBox="0 0 123 23">
           <g id="logo_dipsy">
             <path d={svgPaths.p412a900} fill="var(--fill-0, white)" />
             <path d={svgPaths.p133bb600} fill="var(--fill-0, white)" />
@@ -622,8 +616,8 @@ function Footer() {
           </g>
         </svg>
       </div>
-      <motion.p {...fadeIn} className="absolute font-['Instrument_Serif',serif] font-light leading-[16px] left-[138px] text-[11px] text-white top-[5782px] whitespace-pre" style={{ fontVariationSettings: "'wdth' 100" }}>{`©  2026 DIPSY Inc. All rights reserved.`}</motion.p>
-      <motion.p {...fadeIn} className="absolute font-['Noto_Sans_JP',sans-serif] leading-[16px] left-[30px] not-italic text-[12px] text-white top-[5782px] whitespace-pre">{`利用規約　　｜　　`}</motion.p>
+      <motion.p {...fadeIn} className="absolute font-['Roboto',sans-serif] font-light leading-[16px] left-[138px] text-[11px] text-white top-[7012px] whitespace-pre" style={{ fontVariationSettings: "'wdth' 100" }}>{`©  2026 DIPSY Inc. All rights reserved.`}</motion.p>
+      <motion.p {...fadeIn} className="absolute font-['Noto_Sans_JP',sans-serif] leading-[16px] left-[30px] not-italic text-[12px] text-white top-[7012px] whitespace-pre">{`利用規約　　｜　　`}</motion.p>
     </footer>
   );
 }
