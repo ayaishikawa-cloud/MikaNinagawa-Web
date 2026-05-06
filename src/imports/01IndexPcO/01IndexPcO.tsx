@@ -153,7 +153,7 @@ function Hero() {
         <div className="-rotate-15 scale-[0.7] flex-none h-[hypot(5.5846cqw,45.1707cqh)] w-[hypot(94.4154cqw,-54.8293cqh)]">
           <div className="relative size-full">
             <div className="absolute inset-[-27.32%_-6.03%]">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 929 283">
+              <svg className="block size-full" fill="none" preserveAspectRatio="xMidYMid meet" viewBox="0 0 929 283">
                 <g filter="url(#filter0_d_1_144)" id="title">
                   <path d={svgPaths.p32564580} fill="var(--fill-0, white)" />
                   <path d={svgPaths.p2c0afb00} fill="var(--fill-0, white)" />
@@ -345,7 +345,7 @@ function Section1() {
           </motion.span>
         ))}
       </p>
-      <div className="absolute flex h-[68px] items-center justify-center left-[calc(50%-611px)] top-[2527px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+      <div className="absolute flex h-[68px] items-center justify-center left-[calc(50%-611px)] top-[2677px] w-[12px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-90">
           <p className="font-['Instrument_Serif',serif] leading-[12px] not-italic relative text-[18px] text-white tracking-[1.08px] whitespace-nowrap">Comment</p>
         </div>
@@ -501,13 +501,16 @@ function Img04Sec() {
 }
 
 function Frame2() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const x = useTransform(scrollYProgress, [0, 1], [400, -400]);
   return (
-    <div className="content-stretch flex gap-[24px] items-center leading-[0] relative shrink-0">
+    <motion.div ref={ref} style={{ x }} className="content-stretch flex gap-[24px] items-center leading-[0] relative shrink-0">
       <Img01Sec />
       <Img02Sec />
       <Img03Sec />
       <Img04Sec />
-    </div>
+    </motion.div>
   );
 }
 
