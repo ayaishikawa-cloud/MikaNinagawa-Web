@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Component01IndexPcO from "../imports/01IndexPcO/01IndexPcO";
+import SmoothScroll from "./SmoothScroll";
 
 const DESIGN_WIDTH = 1280;
 const DESIGN_HEIGHT = 5820;
@@ -15,21 +16,24 @@ export default function App() {
   }, []);
 
   return (
-    <div
-      className="bg-[#111] w-full overflow-hidden [&_*]:!font-extralight"
-      style={{ height: DESIGN_HEIGHT * scale, fontWeight: 200 }}
-    >
+    <>
+      <SmoothScroll />
       <div
-        className="relative"
-        style={{
-          width: DESIGN_WIDTH,
-          height: DESIGN_HEIGHT,
-          transform: `scale(${scale})`,
-          transformOrigin: "top left",
-        }}
+        className="bg-[#111] w-full overflow-hidden [&_*]:!font-extralight"
+        style={{ height: DESIGN_HEIGHT * scale, fontWeight: 200 }}
       >
-        <Component01IndexPcO />
+        <div
+          className="relative"
+          style={{
+            width: DESIGN_WIDTH,
+            height: DESIGN_HEIGHT,
+            transform: `scale(${scale})`,
+            transformOrigin: "top left",
+          }}
+        >
+          <Component01IndexPcO />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

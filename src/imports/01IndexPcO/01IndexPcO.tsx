@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import HeroScrollAnimation from "./HeroScrollAnimation";
 
 const fadeIn = {
   initial: { opacity: 0, y: 16 },
@@ -34,7 +35,7 @@ import { img80A06841, img141216041936900X12001, imgBox022 } from "./svg-n94c3";
 
 function MovieHero() {
   return (
-    <div className="-translate-x-1/2 absolute h-[854px] left-1/2 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0px] mask-size-[1280px_720px] opacity-90 top-0 w-[1280px]" style={{ maskImage: `url('${img80A06841}')` }}>
+    <div data-hero="bg" className="-translate-x-1/2 absolute h-[854px] left-1/2 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0px] mask-size-[1280px_720px] opacity-90 top-0 w-[1280px]" style={{ maskImage: `url('${img80A06841}')` }}>
       <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img80A6842} />
     </div>
   );
@@ -51,7 +52,7 @@ function AnkerSection() {
 
 function Floating() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[15px] items-start right-[25px] top-[599px] w-[320px]">
+    <div data-hero="cta" className="absolute content-stretch flex flex-col gap-[15px] items-start right-[25px] top-[599px] w-[320px]">
       <p className="font-['Instrument_Serif',serif] leading-[24px] not-italic relative shrink-0 text-[20px] text-left text-shadow-[0px_0px_20px_rgba(0,0,0,0.65)] text-white tracking-[0.6px] whitespace-nowrap">Mika Ninagawa Artist’s Book</p>
       <AnkerSection />
     </div>
@@ -59,11 +60,13 @@ function Floating() {
 }
 
 function Hero() {
+  const heroRef = useRef<HTMLElement>(null);
   return (
-    <section>
+    <section ref={heroRef}>
+      <HeroScrollAnimation containerRef={heroRef} />
       <MovieHero />
       <Floating />
-      <div className="absolute h-[156px] left-[1121px] top-[204px] w-[54px]">
+      <div data-hero="decor" className="absolute h-[156px] left-[1121px] top-[204px] w-[54px]">
         <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 54 156">
           <g id="special">
             <path d={svgPaths.p22051900} fill="var(--fill-0, white)" />
@@ -73,7 +76,7 @@ function Hero() {
           </g>
         </svg>
       </div>
-      <div className="absolute h-[346px] left-[1053px] top-[196px] w-[35px]">
+      <div data-hero="decor" className="absolute h-[346px] left-[1053px] top-[196px] w-[35px]">
         <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 35 346">
           <g id="mirrormirrormirror">
             <path d={svgPaths.p33743280} fill="var(--fill-0, white)" />
@@ -90,7 +93,7 @@ function Hero() {
           </g>
         </svg>
       </div>
-      <motion.div initial={{ y: -120, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.1, ease: "easeOut" }} className="absolute h-[646px] left-[119px] top-[44px] w-[58px]">
+      <motion.div data-hero="decor" initial={{ y: -120, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.1, ease: "easeOut" }} className="absolute h-[646px] left-[119px] top-[44px] w-[58px]">
         <div className="absolute inset-[-8.05%_-89.66%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 162 750">
             <g filter="url(#filter0_d_1_150)" id="mikaninagawa">
@@ -114,7 +117,7 @@ function Hero() {
           </svg>
         </div>
       </motion.div>
-      <div className="absolute flex h-[148.808px] items-center justify-center left-[890px] top-[555px] w-[436.877px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+      <div data-hero="decor" className="absolute flex h-[148.808px] items-center justify-center left-[890px] top-[555px] w-[436.877px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-[161.19deg]">
           <div className="h-0 relative w-[461.525px]">
             <div className="absolute inset-[-1px_0_0_0]">
@@ -125,7 +128,7 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="absolute flex h-[368px] items-center justify-center left-0 top-[196px] w-[903px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
+      <div data-hero="decor" className="absolute flex h-[368px] items-center justify-center left-0 top-[196px] w-[903px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
         <div className="flex-none rotate-[22.17deg]">
           <div className="h-0 relative w-[975.107px]">
             <div className="absolute inset-[-1px_0_0_0]">
@@ -136,7 +139,7 @@ function Hero() {
           </div>
         </div>
       </div>
-      <motion.div initial={{ clipPath: "inset(0 100% 0 0)" }} animate={{ clipPath: "inset(0 0% 0 0)" }} transition={{ duration: 1, ease: "easeOut", delay: 0.1 }} className="absolute flex inset-[1.18%_-3.68%_91.93%_37.42%] items-center justify-center" style={{ containerType: "size" }}>
+      <motion.div data-hero="title" initial={{ clipPath: "inset(0 100% 0 0)" }} animate={{ clipPath: "inset(0 0% 0 0)" }} transition={{ duration: 1, ease: "easeOut", delay: 0.1 }} className="absolute flex inset-[1.18%_-3.68%_91.93%_37.42%] items-center justify-center" style={{ containerType: "size" }}>
         <div className="-rotate-15 flex-none h-[hypot(5.5846cqw,45.1707cqh)] w-[hypot(94.4154cqw,-54.8293cqh)]">
           <div className="relative size-full">
             <div className="absolute inset-[-27.32%_-6.03%]">
