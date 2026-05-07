@@ -8,6 +8,7 @@ export default function SmoothScroll() {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
     });
+    (window as unknown as { lenis?: Lenis }).lenis = lenis;
 
     let rafId = 0;
     const raf = (time: number) => {
@@ -18,6 +19,7 @@ export default function SmoothScroll() {
 
     return () => {
       cancelAnimationFrame(rafId);
+      delete (window as unknown as { lenis?: Lenis }).lenis;
       lenis.destroy();
     };
   }, []);

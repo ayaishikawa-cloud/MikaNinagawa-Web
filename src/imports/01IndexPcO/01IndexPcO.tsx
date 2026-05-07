@@ -48,11 +48,22 @@ function MovieHero() {
 }
 
 function AnkerSection() {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const target = document.querySelector("#section03");
+    if (!target) return;
+    e.preventDefault();
+    const lenis = (window as unknown as { lenis?: { scrollTo: (t: HTMLElement | string, opts?: { duration?: number }) => void } }).lenis;
+    if (lenis) {
+      lenis.scrollTo("#section03", { duration: 1.4 });
+    } else {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 cursor-pointer group">
+    <a href="#section03" onClick={handleClick} className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 cursor-pointer group">
       <div className="bg-white col-1 h-[44px] ml-0 mt-0 relative rounded-[5px] row-1 w-[139px] transition-colors duration-200 group-hover:bg-neutral-300" />
       <p className="col-1 font-['Noto_Sans_JP',sans-serif] leading-[22px] ml-[31px] mt-[11px] not-italic relative row-1 text-[13px] text-black whitespace-nowrap pointer-events-none">予約注文する</p>
-    </div>
+    </a>
   );
 }
 

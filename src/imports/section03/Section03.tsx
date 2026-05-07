@@ -34,7 +34,7 @@ export default function Section03() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="flex w-full" style={{ height: "300vh" }}>
+    <section ref={sectionRef} id="section03" className="flex w-full" style={{ height: "300vh" }}>
       <div className="sticky top-0 h-screen w-1/2 bg-[#EEEFF2] flex items-center justify-center overflow-hidden">
         <div className="w-full aspect-[4/5] flex items-center justify-center">
           <video
