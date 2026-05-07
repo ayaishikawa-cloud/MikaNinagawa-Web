@@ -462,7 +462,7 @@ function Frame4() {
         <motion.p {...fadeIn} className="leading-[49px] mb-0">mirror, mirror, mirror</motion.p>
         <motion.p {...fadeIn} className="leading-[49px]">mika ninagawa 展</motion.p>
       </div>
-      <motion.p {...fadeIn} className="font-['Noto_Sans_JP',sans-serif] h-[124px] leading-[25px] min-w-full not-italic relative shrink-0 text-[14px] text-white w-[min-content]">蜷川実花が、10数年にわたり活動の拠点としてきた下北沢の地において、アーティストブックの刊行を記念した展覧会を開催します。本展は、アーティストブックに結実した表現の軌跡を、展示空間の中であらためて構成する試みです。「破壊、再生、また破壊」という創作テーマのもと、蜷川の表現史と現在の表現が、ひとつの空間として提示されます​。</motion.p>
+      <motion.p {...fadeIn} className="font-['Noto_Sans_JP',sans-serif] h-[124px] leading-[25px] min-w-full not-italic relative shrink-0 text-[12px] text-white w-[min-content]">蜷川実花が、10数年にわたり活動の拠点としてきた下北沢の地において、アーティストブックの刊行を記念した展覧会を開催します。本展は、アーティストブックに結実した表現の軌跡を、展示空間の中であらためて構成する試みです。「破壊、再生、また破壊」という創作テーマのもと、蜷川の表現史と現在の表現が、ひとつの空間として提示されます​。</motion.p>
       <ButtonDetail />
     </div>
   );
