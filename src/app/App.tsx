@@ -3,7 +3,6 @@ import { TopCanvasContent, BottomCanvasContent } from "../imports/01IndexPcO/01I
 import Section03 from "../imports/section03/Section03";
 import SmoothScroll from "./SmoothScroll";
 import LoadingScreen from "./LoadingScreen";
-import PasswordGate from "./PasswordGate";
 
 const DESIGN_WIDTH = 1280;
 const TOP_CANVAS_HEIGHT = 4098;
@@ -38,7 +37,7 @@ function ScaledCanvas({ height, children }: { height: number; children: ReactNod
 
 export default function App() {
   return (
-    <PasswordGate>
+    <>
       <LoadingScreen />
       <SmoothScroll />
       <main className="[&_*]:!font-extralight" style={{ fontWeight: 200 }}>
@@ -50,6 +49,6 @@ export default function App() {
           <BottomCanvasContent />
         </ScaledCanvas>
       </main>
-    </PasswordGate>
+    </>
   );
 }
