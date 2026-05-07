@@ -19,7 +19,7 @@ function figmaAssetResolver() {
 export default defineConfig({
   // GitHub Pages serves the site under /<repo-name>/. Override with
   // VITE_BASE=/ when running locally if you want absolute paths.
-  base: process.env.VITE_BASE ?? '/Mikaninagawaprototype/',
+  base: process.env.VITE_BASE ?? '/MikaNinagawa-Web/',
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if
