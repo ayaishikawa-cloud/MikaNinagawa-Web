@@ -35,8 +35,8 @@ export default function Section03() {
 
   return (
     <section ref={sectionRef} className="flex w-full" style={{ height: "300vh" }}>
-      <div className="sticky top-0 h-screen w-1/2 bg-[#F1F0F2] flex items-center justify-center overflow-hidden">
-        <div className="w-[50%] aspect-[4/5] flex items-center justify-center">
+      <div className="sticky top-0 h-screen w-1/2 bg-[#F2F2F4] flex items-center justify-center overflow-hidden">
+        <div className="w-full aspect-[4/5] flex items-center justify-center">
           <video
             src={boxVideo}
             autoPlay
@@ -50,7 +50,7 @@ export default function Section03() {
 
       <div ref={textColRef} className="w-1/2 bg-[#111] text-white">
         <div className="h-[150vh]" aria-hidden />
-        <div className="px-[8%] py-[80px] flex flex-col gap-[40px]">
+        <div className="px-[8%] py-[64px] flex flex-col gap-[40px]">
           <img data-reveal src={tagSpecialSvg} alt="特装版" className="block w-[82px] h-[29px]" />
 
           <h2 data-reveal className="font-['Hiragino_Mincho_Pro',serif] text-[40px] leading-[1.3]">mirror, mirror, mirror<br />mika ninagawa</h2>
@@ -64,15 +64,15 @@ export default function Section03() {
             予約注文する
           </button>
 
-          <p data-reveal className="font-['Noto_Sans_JP',sans-serif] text-[10px] leading-[16px] opacity-80 -mt-[27px]">
+          <p data-reveal className="font-['Noto_Sans_JP',sans-serif] text-[8px] leading-[14px] opacity-80 -mt-[27px]">
             発送予定：ご注文いただいてから、6ヶ月後から順次発送
           </p>
 
-          <p data-reveal className="font-['Noto_Sans_JP',sans-serif] text-[13px] leading-[22px] text-justify max-w-[460px]">
+          <p data-reveal className="font-['Noto_Sans_JP',sans-serif] text-[12px] leading-[20px] text-justify max-w-[460px]">
             祭壇をイメージした、小型のアクリル製キャビネットの中にアーティストブックを収納した特装版を限定リリースします。キャビネットの内には、今回刊行される書籍をは​じめ、蜷川がセレクトした追悼や記憶にまつわるアイテムが収められます。日常の​空間に置かれるひとつの私的な祭壇として、記憶と現在、生と死のあいだに静かな​回路をひらくオブジェクトです。
           </p>
 
-          <div data-reveal className="font-['Noto_Sans_JP',sans-serif] text-[13px] leading-[25px] text-justify max-w-[460px] flex flex-col">
+          <div data-reveal className="font-['Noto_Sans_JP',sans-serif] text-[11px] leading-[22px] text-justify max-w-[460px] flex flex-col">
             <span>受注締切：第一期 7月30日</span>
             <span>販売数：限定30作品</span>
             <span>著者：蜷川実花</span>
