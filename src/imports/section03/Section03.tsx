@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import boxVideo from "../01IndexPcO/box_3d.mp4";
+import tagSpecialSvg from "../../assets/tag_special.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,8 +52,8 @@ export default function Section03() {
 
   return (
     <section ref={sectionRef} className="flex w-full" style={{ height: "300vh" }}>
-      <div className="sticky top-0 h-screen w-1/2 bg-[#e5e5e5] flex items-center justify-center overflow-hidden">
-        <div ref={visualRef} className="w-[80%] aspect-[4/5] flex items-center justify-center" style={{ willChange: "transform" }}>
+      <div className="sticky top-0 h-screen w-1/2 bg-[#F1F0F2] flex items-center justify-center overflow-hidden">
+        <div ref={visualRef} className="w-[50%] aspect-[4/5] flex items-center justify-center" style={{ willChange: "transform" }}>
           <video
             src={boxVideo}
             autoPlay
@@ -64,10 +65,10 @@ export default function Section03() {
         </div>
       </div>
 
-      <div ref={textColRef} className="w-1/2 bg-black text-white">
+      <div ref={textColRef} className="w-1/2 bg-[#111] text-white">
         <div className="h-[150vh]" aria-hidden />
         <div className="px-[8%] py-[80px] flex flex-col gap-[40px]">
-          <p data-reveal className="font-['Instrument_Serif',serif] text-[14px] tracking-[1.4px]">/ Product Description</p>
+          <img data-reveal src={tagSpecialSvg} alt="特装版" className="block w-[82px] h-[29px]" />
 
           <h2 data-reveal className="font-['Hiragino_Mincho_Pro',serif] text-[40px] leading-[1.3]">mirror, mirror, mirror<br />mika ninagawa</h2>
 
@@ -80,15 +81,13 @@ export default function Section03() {
             予約注文する
           </button>
 
-          <p data-reveal className="font-['Noto_Sans_JP',sans-serif] text-[10px] leading-[16px] opacity-80">
+          <p data-reveal className="font-['Noto_Sans_JP',sans-serif] text-[10px] leading-[16px] opacity-80 -mt-[27px]">
             発送予定：ご注文いただいてから、6ヶ月後から順次発送
           </p>
 
           <p data-reveal className="font-['Noto_Sans_JP',sans-serif] text-[13px] leading-[22px] text-justify max-w-[460px]">
             祭壇をイメージした、小型のアクリル製キャビネットの中にアーティストブックを収納した特装版を限定リリースします。キャビネットの内には、今回刊行される書籍をは​じめ、蜷川がセレクトした追悼や記憶にまつわるアイテムが収められます。日常の​空間に置かれるひとつの私的な祭壇として、記憶と現在、生と死のあいだに静かな​回路をひらくオブジェクトです。
           </p>
-
-          <p data-reveal className="font-['Noto_Sans_JP',sans-serif] text-[14px] leading-[22px]">商品詳細</p>
 
           <div data-reveal className="font-['Noto_Sans_JP',sans-serif] text-[13px] leading-[25px] text-justify max-w-[460px] flex flex-col">
             <span>受注締切：第一期 7月30日</span>
