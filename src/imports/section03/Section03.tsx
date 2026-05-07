@@ -51,9 +51,9 @@ export default function Section03() {
       <div ref={textColRef} className="w-1/2 bg-[#111] text-white">
         <div className="h-[150vh]" aria-hidden />
         <div className="px-[8%] py-[64px] flex flex-col gap-[40px]">
-          <img data-reveal src={tagSpecialSvg} alt="特装版" className="block w-[82px] h-[29px]" />
+          <img data-reveal src={tagSpecialSvg} alt="特装版" className="block w-[66px] h-[23px] mb-[-16px]" />
 
-          <h2 data-reveal className="font-['Hiragino_Mincho_Pro',serif] text-[40px] leading-[1.3]">mirror, mirror, mirror<br />mika ninagawa</h2>
+          <h2 data-reveal className="font-['Hiragino_Mincho_Pro',serif] text-[38px] leading-[1.3] mb-[-8px]">mirror, mirror, mirror<br />mika ninagawa</h2>
 
           <p data-reveal className="font-['Noto_Sans_JP',sans-serif] tracking-[0.96px]">
             <span className="text-[32px]">¥820,000</span>
