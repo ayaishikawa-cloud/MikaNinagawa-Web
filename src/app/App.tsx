@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
-import Component01IndexPcO from "../imports/01IndexPcO/01IndexPcO";
+import { ReactNode, useEffect, useState } from "react";
+import { TopCanvasContent, BottomCanvasContent } from "../imports/01IndexPcO/01IndexPcO";
+import Section03 from "../imports/section03/Section03";
 import SmoothScroll from "./SmoothScroll";
 import LoadingScreen from "./LoadingScreen";
 
 const DESIGN_WIDTH = 1280;
-const DESIGN_HEIGHT = 7050;
+const TOP_CANVAS_HEIGHT = 4098;
+const BOTTOM_CANVAS_HEIGHT = 1833;
 
-export default function App() {
+function ScaledCanvas({ height, children }: { height: number; children: ReactNode }) {
   const [scale, setScale] = useState(1);
 
   useEffect(() => {
@@ -17,25 +19,36 @@ export default function App() {
   }, []);
 
   return (
+    <div className="bg-[#111] w-full overflow-x-clip" style={{ height: height * scale }}>
+      <div
+        className="relative"
+        style={{
+          width: DESIGN_WIDTH,
+          height,
+          transform: `scale(${scale})`,
+          transformOrigin: "top left",
+        }}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
     <>
       <LoadingScreen />
       <SmoothScroll />
-      <div
-        className="bg-[#111] w-full overflow-x-clip [&_*]:!font-extralight"
-        style={{ height: DESIGN_HEIGHT * scale, fontWeight: 200 }}
-      >
-        <div
-          className="relative"
-          style={{
-            width: DESIGN_WIDTH,
-            height: DESIGN_HEIGHT,
-            transform: `scale(${scale})`,
-            transformOrigin: "top left",
-          }}
-        >
-          <Component01IndexPcO />
-        </div>
-      </div>
+      <main className="[&_*]:!font-extralight" style={{ fontWeight: 200 }}>
+        <ScaledCanvas height={TOP_CANVAS_HEIGHT}>
+          <TopCanvasContent />
+        </ScaledCanvas>
+        <Section03 />
+        <ScaledCanvas height={BOTTOM_CANVAS_HEIGHT}>
+          <BottomCanvasContent />
+        </ScaledCanvas>
+      </main>
     </>
   );
 }
