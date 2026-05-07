@@ -8,31 +8,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Section03() {
   const sectionRef = useRef<HTMLElement>(null);
-  const visualRef = useRef<HTMLDivElement>(null);
   const textColRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
-    const visual = visualRef.current;
     const textCol = textColRef.current;
-    if (!section || !visual || !textCol) return;
+    if (!section || !textCol) return;
 
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        visual,
-        { scale: 0.4 },
-        {
-          scale: 1,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 1,
-          },
-        }
-      );
-
       const reveals = textCol.querySelectorAll<HTMLElement>("[data-reveal]");
       ScrollTrigger.batch(reveals, {
         onEnter: (els) =>
@@ -53,7 +36,7 @@ export default function Section03() {
   return (
     <section ref={sectionRef} className="flex w-full" style={{ height: "300vh" }}>
       <div className="sticky top-0 h-screen w-1/2 bg-[#F1F0F2] flex items-center justify-center overflow-hidden">
-        <div ref={visualRef} className="w-[50%] aspect-[4/5] flex items-center justify-center" style={{ willChange: "transform" }}>
+        <div className="w-[50%] aspect-[4/5] flex items-center justify-center">
           <video
             src={boxVideo}
             autoPlay
