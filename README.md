@@ -18,31 +18,27 @@ VITE_BASE=/ npm run dev
 
 ## Password-protected preview on GitHub Pages
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds with Vite and publishes to the repository's GitHub Pages site.
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds with Vite, encrypts `dist/index.html` with [StatiCrypt](https://github.com/robinmoisson/staticrypt), and publishes the result to the repository's GitHub Pages site.
 
-URL once published: `https://<owner>.github.io/Mikaninagawaprototype/`
+URL once published: `https://<owner>.github.io/MikaNinagawa-Web/`
 
 ### One-time GitHub setup
 
 1. **Settings → Pages**: set "Build and deployment" → Source to **GitHub Actions**
-2. Push to `main` (or run the workflow manually from the Actions tab) — first run takes ~2 min
+2. **Settings → Secrets and variables → Actions**: add a repository secret named `STATICRYPT_PASSWORD` with the password you want to gate the preview behind
+3. Push to `main` (or run the workflow manually from the Actions tab) — first run takes ~2 min
 
 ### Password gate
 
-`src/app/PasswordGate.tsx` shows a full-screen password prompt before the site renders. The check is client-side SHA-256 against a hardcoded hash, so this is a *light* gate (anyone willing to read the bundle can bypass it). Treat it as a "no accidental visitors" cover, not a security boundary.
+StatiCrypt encrypts the built `index.html` with AES-256 before publishing. Visitors see a password prompt rendered by StatiCrypt's wrapper page; entering the correct password decrypts the original HTML client-side and renders the site.
 
-**Default password**: `ninagawa-preview`
+This is a *light* gate — anyone with the password can share the encrypted bundle or the decrypted HTML. Treat it as a "no accidental visitors" cover, not a security boundary.
 
 To change the password:
 
-1. Pick a new password.
-2. Compute its SHA-256 hash:
+1. Open **Settings → Secrets and variables → Actions** and update the `STATICRYPT_PASSWORD` secret.
+2. Re-run the deploy workflow (push to `main` or trigger manually from the Actions tab).
 
-   ```bash
-   python3 -c 'import hashlib; print(hashlib.sha256(b"NEW_PASSWORD").hexdigest())'
-   ```
+StatiCrypt also stores the unlocked state in `sessionStorage`, so each visitor only enters the password once per browser session.
 
-3. Replace `PASSWORD_SHA256` in `src/app/PasswordGate.tsx` with the new hex string.
-4. Commit and push to `main` — the workflow redeploys automatically.
-
-The unlock state is stored in `sessionStorage`, so visitors only enter the password once per browser session.
+> Historical note: an earlier revision of this project shipped an in-app `src/app/PasswordGate.tsx` component that did client-side SHA-256 password matching. It was removed in favour of the StatiCrypt-based flow above.
