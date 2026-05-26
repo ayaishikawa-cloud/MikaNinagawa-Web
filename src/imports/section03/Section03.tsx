@@ -1,15 +1,26 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import boxVideo from "../01IndexPcO/box_3d.mp4";
 import tagSpecialSvg from "../../assets/tag_special.svg";
+import { cartCreate, variantIdToGid } from "../../lib/shopify";
 
 gsap.registerPlugin(ScrollTrigger);
+
+// Shopify env (build 時に Vite が import.meta.env で焼き込む)
+const SHOPIFY_DOMAIN = import.meta.env.VITE_SHOPIFY_DOMAIN as string | undefined;
+const SHOPIFY_VARIANT_ID = import.meta.env.VITE_SHOPIFY_VARIANT_ID as string | undefined;
+
+// Shop Pay button web component の readiness 検出 timeout (ms)
+const SHOP_PAY_READY_TIMEOUT_MS = 5000;
 
 export default function Section03() {
   const sectionRef = useRef<HTMLElement>(null);
   const textColRef = useRef<HTMLDivElement>(null);
+  const [shopPayReady, setShopPayReady] = useState(false);
+  const [preorderState, setPreorderState] = useState<"idle" | "loading" | "error">("idle");
 
+  // GSAP reveal animation (既存)
   useEffect(() => {
     const section = sectionRef.current;
     const textCol = textColRef.current;
@@ -32,6 +43,62 @@ export default function Section03() {
 
     return () => ctx.revert();
   }, []);
+
+  // Shop Pay web component readiness 検出
+  // - customElements.whenDefined は loader script 未ロード時に never resolve するため timeout を併用
+  // - 5 秒以内に登録されなかった場合は button を非表示にして primary CTA だけ残す
+  useEffect(() => {
+    if (typeof window === "undefined" || !("customElements" in window)) return;
+
+    if (customElements.get("shop-pay-button")) {
+      setShopPayReady(true);
+      return;
+    }
+
+    let cancelled = false;
+    Promise.race([
+      customElements.whenDefined("shop-pay-button"),
+      new Promise<void>((_, reject) =>
+        setTimeout(
+          () => reject(new Error("shop-pay-button load timeout")),
+          SHOP_PAY_READY_TIMEOUT_MS,
+        ),
+      ),
+    ])
+      .then(() => {
+        if (!cancelled) setShopPayReady(true);
+      })
+      .catch(() => {
+        if (!cancelled) {
+          console.warn(
+            "[ShopPay] web component unavailable; falling back to primary CTA only",
+          );
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  // 「予約注文する」クリックハンドラ (cartCreate → checkoutUrl リダイレクト)
+  const handlePreorder = async () => {
+    if (!SHOPIFY_VARIANT_ID) {
+      console.error("[Preorder] VITE_SHOPIFY_VARIANT_ID is not set");
+      setPreorderState("error");
+      return;
+    }
+    setPreorderState("loading");
+    try {
+      const cart = await cartCreate([
+        { merchandiseId: variantIdToGid(SHOPIFY_VARIANT_ID), quantity: 1 },
+      ]);
+      window.location.href = cart.checkoutUrl;
+    } catch (e) {
+      console.error("[Preorder] cartCreate failed", e);
+      setPreorderState("error");
+    }
+  };
 
   return (
     <section ref={sectionRef} id="section03" className="flex w-full" style={{ height: "300vh" }}>
@@ -60,9 +127,30 @@ export default function Section03() {
             <span className="text-[16px] ml-[8px]">(税込)</span>
           </p>
 
-          <button data-reveal type="button" className="bg-white text-black font-['Noto_Sans_JP',sans-serif] text-[13px] leading-[22px] rounded-[5px] w-[180px] h-[48px] transition-colors duration-200 hover:bg-neutral-300">
-            予約注文する
-          </button>
+          {/* CTA 群: 「予約注文する」+ Shop Pay button を縦並列、同幅 180px */}
+          <div data-reveal className="flex flex-col gap-3 w-[180px]">
+            <button
+              type="button"
+              onClick={handlePreorder}
+              disabled={preorderState === "loading"}
+              className="bg-white text-black font-['Noto_Sans_JP',sans-serif] text-[13px] leading-[22px] rounded-[5px] w-full h-[48px] transition-colors duration-200 hover:bg-neutral-300 disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {preorderState === "loading" ? "読み込み中..." : "予約注文する"}
+            </button>
+
+            {preorderState === "error" && (
+              <p className="font-['Noto_Sans_JP',sans-serif] text-[10px] leading-[14px] text-red-300">
+                一時的なエラーが発生しました。しばらく経ってから再度お試しください。
+              </p>
+            )}
+
+            {shopPayReady && SHOPIFY_DOMAIN && SHOPIFY_VARIANT_ID && (
+              <shop-pay-button
+                store-url={`https://${SHOPIFY_DOMAIN}`}
+                variants={`${SHOPIFY_VARIANT_ID}:1`}
+              />
+            )}
+          </div>
 
           <p data-reveal className="font-['Noto_Sans_JP',sans-serif] text-[8px] leading-[14px] opacity-80 -mt-[27px]">
             発送予定：ご注文いただいてから、6ヶ月後から順次発送

@@ -4,3 +4,8 @@ package-lock.json
 .DS_Store
 dist/
 .vite/
+
+# Local env (Shopify token などの secret)
+.env
+.env.local
+.env.*.local

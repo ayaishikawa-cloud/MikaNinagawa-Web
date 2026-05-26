@@ -24,6 +24,10 @@ jobs:
           node-version: 20
       - run: npm install --no-audit --no-fund
       - run: npm run build
+        env:
+          VITE_SHOPIFY_DOMAIN: ${{ secrets.VITE_SHOPIFY_DOMAIN }}
+          VITE_SHOPIFY_STOREFRONT_TOKEN: ${{ secrets.VITE_SHOPIFY_STOREFRONT_TOKEN }}
+          VITE_SHOPIFY_VARIANT_ID: ${{ secrets.VITE_SHOPIFY_VARIANT_ID }}
       - name: Encrypt index.html with StatiCrypt
         env:
           STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}

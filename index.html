@@ -1,11 +1,27 @@
 
   <!DOCTYPE html>
-  <html lang="en">
+  <html lang="ja">
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Website Design Creation</title>
       <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+
+      <!--
+        Shop Pay payment request handler (popup support).
+        head 配置必須。shop-pay-button が内部的に必要とする場合あり。
+        参考: https://shopify.dev/docs/api/commerce-components/pay
+      -->
+      <script src="https://cdn.shopify.com/shopifycloud/shop-js/shop-pay-payment-request.js"></script>
+
+      <!--
+        Shop Pay button web component loader (ESM).
+        参考: https://shopify.dev/docs/storefronts/headless/additional-sdks/web-components
+      -->
+      <script
+        type="module"
+        src="https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.pay-button.esm.js"
+      ></script>
     </head>
 
     <body>
@@ -13,4 +29,3 @@
       <script type="module" src="/src/main.tsx"></script>
     </body>
   </html>
-  
